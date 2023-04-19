@@ -18,7 +18,7 @@ public class UI_Inventory : MonoBehaviour
     private void Awake()
     {
         
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
         
