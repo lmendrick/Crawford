@@ -13,6 +13,7 @@ public class InventoryInteract : MonoBehaviour
     {
         // Toggles "HasKey" for testing
         if (Keyboard.current.qKey.wasPressedThisFrame) HasKey = !HasKey;
+        
 
     }
 }

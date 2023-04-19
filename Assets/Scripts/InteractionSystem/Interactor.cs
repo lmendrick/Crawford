@@ -21,6 +21,7 @@ public class Interactor : MonoBehaviour
     
     private PlayerInput _input;
     
+    
     private void Update()
     {
         //Number of objects on the interactable layer that the player (interaction point) is colliding with

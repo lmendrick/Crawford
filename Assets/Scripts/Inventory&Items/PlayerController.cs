@@ -20,10 +20,11 @@ public class PlayerController : MonoBehaviour
         _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
-
-        ItemWorld.SpawnItemWorld(new Vector3(5, 5), new Item { itemType = Item.ItemType.Item1, amount = 1 });
+        
 
     }
+
+
 
     private void UseItem(Item item)
     {
