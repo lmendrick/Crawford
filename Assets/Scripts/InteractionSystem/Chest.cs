@@ -12,13 +12,13 @@ public class Chest : MonoBehaviour, IInteractable
     
     public bool Interact(Interactor interactor)
     {
+
+        ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Key, amount =1});
         
-        var inventory = interactor.GetComponent<Inventory>();
+       // if (itemSpawn == null) return false;
         
-        if (inventory == null) return false;
-        
-        inventory.AddItem(Item.ItemType.Key);
-        Debug.Log("Opening Chest!");                    //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
+       // inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount =1});
+        Debug.Log("You found a key!");                    //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
         return true;
     }
 }

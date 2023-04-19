@@ -9,13 +9,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private UI_Inventory _uiInventory;
     [SerializeField] private GameObject InvGUI;
     private PlayerInput input;
+    private Rigidbody2D _rigidbody;
     private Inventory inventory;
     private bool InvIsOpen;
+
+    
     private void Awake()
     {
         inventory = new Inventory(UseItem);
         _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
+        _rigidbody = GetComponent<Rigidbody2D>();
 
     }
 
@@ -55,5 +59,14 @@ public class PlayerController : MonoBehaviour
                 InvIsOpen = false;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //set direction to the Move action's Vector2 value
+        var dir = input.actions["Move"].ReadValue<Vector2>();
+
+        //change the velocity to match the Move (every physics update)
+        _rigidbody.velocity = dir * 5;
     }
 }
