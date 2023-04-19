@@ -12,7 +12,8 @@ public class Item {
         Item2,
         Item3,
         Item4,
-        Item5
+        Item5,
+        Key
     
     }
 
@@ -29,6 +30,7 @@ public class Item {
             case ItemType.Item3: return ItemAssets.Instance.item3Sprite;
             case ItemType.Item4: return ItemAssets.Instance.item4Sprite;
             case ItemType.Item5: return ItemAssets.Instance.item5Sprite;
+            case ItemType.Key: return ItemAssets.Instance.keySprite;
         }
 
     }
@@ -44,6 +46,7 @@ public class Item {
                 case ItemType.Item3:
                 case ItemType.Item4:
                 case ItemType.Item5:
+                case ItemType.Key:
                     return false;
         }
     }
