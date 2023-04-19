@@ -14,10 +14,9 @@ public class Inventory
    {
       this.useItemAction = useItemAction;
       itemList = new List<Item>();
-      Debug.Log("Inventory");
       AddItem(new Item { itemType = Item.ItemType.Item1, amount =1});
       AddItem(new Item { itemType = Item.ItemType.Item2, amount =1});
-      Debug.Log(itemList.Count);
+      
    }
 
    public void AddItem(Item item)
