@@ -12,15 +12,16 @@ public class UI_Inventory : MonoBehaviour
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
-    private PlayerInput input;
+    
     private bool isOpen = false;
 
     private void Awake()
     {
-        input = GetComponent<PlayerInput>();
-        gameObject.SetActive(false);
+        
+        gameObject.SetActive(true);
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
+        
     }
     public void SetInventory(Inventory inventory)
     {
@@ -36,33 +37,35 @@ public class UI_Inventory : MonoBehaviour
 
     private void RefreshInventoryItems()
     {
-        if (!isOpen)
+      
+        /*if (!isOpen)
         {
             return;
-        }
+        }*/
 
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 30f;
         foreach (Item item in inventory.GetItemList())
         {
-            foreach (Transform child in itemSlotContainer)
+            Debug.Log(inventory.GetItemList().Count);
+           /* foreach (Transform child in itemSlotContainer)
             {
                 if (child == itemSlotTemplate) continue;
                 Destroy(gameObject);
-            }
+            }*/
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
-            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
+            /*itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
                 inventory.UseItem(item);
-            };
+            };*/
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
-            Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
+            Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
 
-            TextMeshProUGUI uiText = itemSlotRectTransform.Find("text").GetComponent<TextMeshProUGUI>();
+            /*TextMeshProUGUI uiText = itemSlotRectTransform.Find("text").GetComponent<TextMeshProUGUI>();
             if (item.amount > 1)
             {
                 uiText.SetText(item.amount.ToString());
@@ -71,7 +74,7 @@ public class UI_Inventory : MonoBehaviour
             else
             {
                 uiText.SetText("");
-            }
+            }*/
             
             x++;
             if (x > 4)

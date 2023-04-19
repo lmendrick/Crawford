@@ -12,10 +12,12 @@ public class Inventory
 
    public Inventory(Action<Item> useItemAction)
    {
-      this.useItemAction = useItemAction;
+      
       itemList = new List<Item>();
       AddItem(new Item { itemType = Item.ItemType.Item1, amount =1});
       AddItem(new Item { itemType = Item.ItemType.Item2, amount =1});
+      Debug.Log(itemList.Count);
+      this.useItemAction = useItemAction;
       
    }
 

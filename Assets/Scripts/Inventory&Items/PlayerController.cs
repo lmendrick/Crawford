@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
         _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
 
+        ItemWorld.SpawnItemWorld(new Vector3(5, 5), new Item { itemType = Item.ItemType.Item1, amount = 1 });
+
     }
 
     private void UseItem(Item item)
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
         inventory.AddItem(itemWorld.GetItem());
+        Debug.Log("Item Added");
         itemWorld.DestroySelf();
     }
 

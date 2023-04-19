@@ -17,7 +17,7 @@ public class Chest : MonoBehaviour, IInteractable
         
         if (inventory == null) return false;
         
-        inventory.AddItem(Item.ItemType.Key);
+        /*inventory.AddItem();*/
         Debug.Log("Opening Chest!");                    //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
         return true;
     }
