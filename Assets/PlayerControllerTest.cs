@@ -83,6 +83,8 @@ public class PlayerControllerTest : MonoBehaviour
 
 	private void Flip()
 	{
+        
+        
 		// Switch the way the player is labelled as facing.
 		_FacingRight = !_FacingRight;
 
@@ -90,6 +92,8 @@ public class PlayerControllerTest : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+        
+        
 	}
 
 
