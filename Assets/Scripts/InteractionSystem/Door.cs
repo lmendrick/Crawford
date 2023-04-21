@@ -16,17 +16,21 @@ public class Door : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         //Checks to see if the interactor has an inventory
-        var inventory = interactor.GetComponent<InventoryInteract>();
+        _inventory = interactor.getInventory();
         //var inventory1 = 
-
-        if (inventory == null) return false;
+        
 
         //Checks to see if the inventory contains a key and displays a message if it does
-         if (inventory.HasKey)
-         {
-             Debug.Log("Opening Door!");
-             return true;
-         }
+        foreach (Item item in _inventory.GetItemList())  
+        {
+            if (item.itemType == Item.ItemType.Key)
+            {
+                Debug.Log("Opening Door!");
+                Destroy(gameObject);
+                return true;
+            }
+        }
+        
         
         // if (_inventory.GetItemList().Contains(Key));
         // {

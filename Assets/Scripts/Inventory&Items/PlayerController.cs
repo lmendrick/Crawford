@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool InvIsOpen;
 
 
-    
-    private void Awake()
+    protected void Awake()
     {
         inventory = new Inventory(UseItem);
         _uiInventory.SetInventory(inventory);
@@ -51,6 +50,11 @@ public class PlayerController : MonoBehaviour
         inventory.AddItem(itemWorld.GetItem());
         Debug.Log("Item Added");
         itemWorld.DestroySelf();
+    }
+
+    public Inventory getInventory()
+    {
+        return this.inventory;
     }
 
     private void Update()

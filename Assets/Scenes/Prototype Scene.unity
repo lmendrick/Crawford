@@ -255,6 +255,14 @@ PrefabInstance:
       propertyPath: _uiInventory
       value: 
       objectReference: {fileID: 1348157911}
+    - target: {fileID: 4327037220545734598, guid: 5f9d704550186174683762de1115a8f5, type: 3}
+      propertyPath: InvGUI
+      value: 
+      objectReference: {fileID: 1348157909}
+    - target: {fileID: 4327037220545734598, guid: 5f9d704550186174683762de1115a8f5, type: 3}
+      propertyPath: _uiInventory
+      value: 
+      objectReference: {fileID: 1348157911}
     - target: {fileID: 4327037220545734600, guid: 5f9d704550186174683762de1115a8f5, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -541,6 +549,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfff231cea145634c943eca226ff7965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _uiInventory: {fileID: 0}
+  InvGUI: {fileID: 0}
+  speed: 5
+  animator: {fileID: 0}
   _interactionPoint: {fileID: 2037954666}
   _interactionPointRadius: 2
   _interactableMask:

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Interactor : MonoBehaviour
+public class Interactor : PlayerController
 {
 
     [SerializeField] private Transform _interactionPoint;
@@ -20,8 +20,10 @@ public class Interactor : MonoBehaviour
     private IInteractable _interactable;
     
     private PlayerInput _input;
-    
-    
+
+
+
+  
     private void Update()
     {
         //Number of objects on the interactable layer that the player (interaction point) is colliding with
