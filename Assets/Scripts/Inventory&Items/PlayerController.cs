@@ -11,13 +11,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject InvGUI;
     private PlayerInput input;
     private Rigidbody2D _rigidbody;
-
+    /*
     public float speed = 5f;
     public Animator animator;
     private Vector2 movement;
     private bool _FacingRight = true;
+    */
     
-
     private Inventory inventory;
     private bool InvIsOpen;
 
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 
     }
 
@@ -62,10 +62,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
 
-        movement.y = Input.GetAxisRaw("Horizontal");
-        movement.x = Input.GetAxisRaw("Vertical");
+        //movement.y = Input.GetAxisRaw("Horizontal");
+        //movement.x = Input.GetAxisRaw("Vertical");
         
-        animator.SetFloat("xvelocity", movement.sqrMagnitude);
+        //animator.SetFloat("xvelocity", movement.sqrMagnitude);
 
         if (input.actions["Inventory"].WasPressedThisFrame())
         {
@@ -85,8 +85,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + movement * speed * Time.fixedDeltaTime);
-        if (movement.x > 0 && !_FacingRight)
+
+        /*_rigidbody.MovePosition(_rigidbody.position + movement * speed * Time.fixedDeltaTime);
+        
+         ((Proper flipping in PlayerControllerTest)
+         if (movement.x > 0 && !_FacingRight)
         {
             Flip();
         }
@@ -94,19 +97,14 @@ public class PlayerController : MonoBehaviour
         else if (movement.x < 0 && _FacingRight)
         {
             Flip();
-        }
+        }*/
 
-        
-
-        //set direction to the Move action's Vector2 value
-/*        var dir = input.actions["Move"].ReadValue<Vector2>();
-
-        //change the velocity to match the Move (every physics update)
-        _rigidbody.velocity = dir * 5;*/
     }
-    private void Flip()
+    
+    /*private void Flip()
     {
         
+        ((Proper flipping in PlayerControllerTest))
         
         // Switch the way the player is labelled as facing.
         _FacingRight = !_FacingRight;
@@ -117,6 +115,6 @@ public class PlayerController : MonoBehaviour
         transform.localScale = theScale;
         
         
-    }
+    }*/
 
 }
