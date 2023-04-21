@@ -7,8 +7,12 @@ using UnityEngine.InputSystem;
 public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
+
+    private Rigidbody2D _rigidbody;
     
     public string InteractionPrompt => _prompt;
+
+    public Vector2 InteractionPosition => _rigidbody.position;
 
     private Inventory _inventory;
     

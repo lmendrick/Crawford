@@ -11,6 +11,8 @@ public class InteractionPromptUI : MonoBehaviour
     [SerializeField] GameObject _uiPanel;
     [SerializeField] TextMeshProUGUI _promptText;
     
+    
+    
 
     private void Start()
     {
@@ -33,11 +35,13 @@ public class InteractionPromptUI : MonoBehaviour
 
     public bool IsDisplayed = false;
     
-    public void SetUp (string promptText)
+    public void SetUp (string promptText, Vector3 position)
     {
         _promptText.text = promptText;
+        transform.position = position;
         _uiPanel.SetActive(true);
         IsDisplayed = true;
+        
     }
 
     public void Close()
