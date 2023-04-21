@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        //ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item {itemType = Item.ItemType.Item1, amount =1});
         //animator = GetComponent<Animator>();
 
     }
