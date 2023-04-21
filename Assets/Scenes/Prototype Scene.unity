@@ -555,8 +555,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiInventory: {fileID: 0}
   InvGUI: {fileID: 0}
-  speed: 5
-  animator: {fileID: 0}
   _interactionPoint: {fileID: 2037954666}
   _interactionPointRadius: 2
   _interactableMask:
@@ -637,8 +635,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiInventory: {fileID: 1348157911}
   InvGUI: {fileID: 1348157909}
-  speed: 5
-  animator: {fileID: 0}
 --- !u!1 &1114942716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.756}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -20.2148, y: 89.74467}
+  m_AnchoredPosition: {x: -20, y: 117}
   m_SizeDelta: {x: 272.9791, y: 135.7626}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348157911
