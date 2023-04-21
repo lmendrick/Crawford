@@ -827,6 +827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6dd241f82252443b266845418a3764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  animator: {fileID: 0}
 --- !u!114 &1099536136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,6 +841,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfff231cea145634c943eca226ff7965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _uiInventory: {fileID: 0}
+  InvGUI: {fileID: 0}
+  speed: 5
+  animator: {fileID: 0}
   _interactionPoint: {fileID: 2037954666}
   _interactionPointRadius: 2
   _interactableMask:
@@ -919,6 +925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiInventory: {fileID: 933291364}
   InvGUI: {fileID: 933291362}
+  speed: 5
+  animator: {fileID: 0}
 --- !u!1 &1198668622
 GameObject:
   m_ObjectHideFlags: 0

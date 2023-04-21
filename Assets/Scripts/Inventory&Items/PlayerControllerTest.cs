@@ -50,13 +50,7 @@ public class PlayerControllerTest : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
 
         animator.SetFloat("xvelocity", movement.sqrMagnitude);
-
-
-        //if Fire action was performed log it to the console
-/*        if (_input.actions["Fire"].WasPressedThisFrame())
-        {
-            Debug.Log("Fire activated!");
-        }*/
+        
     }
 
     private void FixedUpdate()
@@ -73,11 +67,7 @@ public class PlayerControllerTest : MonoBehaviour
        {
            Flip();
        }
-        //set direction to the Move action's Vector2 value
-/*        var dir = input.actions["Move"].ReadValue<Vector2>();
 
-        //change the velocity to match the Move (every physics update)
-        _rigidbody.velocity = dir * 5;*/
     }
 
 
