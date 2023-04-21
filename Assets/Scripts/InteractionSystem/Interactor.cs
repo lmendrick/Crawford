@@ -41,7 +41,7 @@ public class Interactor : PlayerController
                 // Displays UI prompt if one is not already showing
                 if (!_interactionPromptUI.IsDisplayed)
                 {
-                    _interactionPromptUI.SetUp(_interactable.InteractionPrompt);
+                    _interactionPromptUI.SetUp(_interactable.InteractionPrompt, _colliders[0].transform.position);
                 }
 
                 if (Keyboard.current.eKey.wasPressedThisFrame)              // Change this to work with Game Input Actions instead of just e key     
