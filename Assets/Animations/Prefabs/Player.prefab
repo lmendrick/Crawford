@@ -205,8 +205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiInventory: {fileID: 0}
   InvGUI: {fileID: 0}
-  speed: 5
-  animator: {fileID: 0}
   _interactionPoint: {fileID: 4327037220141959332}
   _interactionPointRadius: 2
   _interactableMask:
@@ -236,7 +234,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 4327037220545734607}
   m_Enabled: 0
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5c5494746a4062240ac71609838d6777, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -287,8 +285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiInventory: {fileID: 0}
   InvGUI: {fileID: 0}
-  speed: 5
-  animator: {fileID: 9023951171177082849}
 --- !u!95 &9023951171177082849
 Animator:
   serializedVersion: 5
@@ -318,7 +314,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4327037220545734607}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5c5494746a4062240ac71609838d6777, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
