@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private UI_Inventory _uiInventory;
     [SerializeField] private GameObject InvGUI;
+    [SerializeField] private GameObject ItemOverlay;
     private PlayerInput input;
     private Rigidbody2D _rigidbody;
     /*
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        ItemOverlay.SetActive(false);
         
         //ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item {itemType = Item.ItemType.Item1, amount =1});
         //animator = GetComponent<Animator>();
@@ -40,8 +42,8 @@ public class PlayerController : MonoBehaviour
     {
         switch (item.itemType)
         {
-            case Item.ItemType.Item1:
-                Debug.Log("Used Item 1");
+            case Item.ItemType.Key:
+                ItemOverlay.SetActive(true);
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.Item1, amount = 1 });
                 break;
         }
