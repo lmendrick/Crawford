@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     
     private Inventory inventory;
     private bool InvIsOpen;
-
+    
 
     protected void Awake()
     {
@@ -28,8 +28,10 @@ public class PlayerController : MonoBehaviour
         _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        
         //ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item {itemType = Item.ItemType.Item1, amount =1});
         //animator = GetComponent<Animator>();
+        
 
     }
 
@@ -50,9 +52,12 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
-        inventory.AddItem(itemWorld.GetItem());
-        Debug.Log("Item Added");
-        itemWorld.DestroySelf();
+        if (itemWorld != null)
+        {
+            inventory.AddItem(itemWorld.GetItem());
+            Debug.Log("Item Added");
+            itemWorld.DestroySelf();
+        }
     }
 
     public Inventory getInventory()
@@ -70,6 +75,7 @@ public class PlayerController : MonoBehaviour
 
         if (input.actions["Inventory"].WasPressedThisFrame())
         {
+            
             Debug.Log("Inv");
             if (!InvIsOpen)
             {
