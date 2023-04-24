@@ -13,7 +13,10 @@ public class Item {
         Item3,
         Item4,
         Item5,
-        Key
+        Key,
+        PuzzlePart1,
+        PuzzlePart2,
+        PuzzlePart3
     
     }
 
