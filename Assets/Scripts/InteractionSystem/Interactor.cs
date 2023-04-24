@@ -21,6 +21,8 @@ public class Interactor : PlayerController
     
     private PlayerInput _input;
 
+    //private Vector3 _uiOffset = new Vector3()
+
 
 
   
@@ -29,6 +31,8 @@ public class Interactor : PlayerController
         //Number of objects on the interactable layer that the player (interaction point) is colliding with
         _numFound = Physics2D.OverlapCircleNonAlloc(_interactionPoint.position, _interactionPointRadius, _colliders,
             _interactableMask);
+
+       
 
         // If the interactor (player) is colliding with an interactable object
         if (_numFound > 0)
@@ -41,7 +45,8 @@ public class Interactor : PlayerController
                 // Displays UI prompt if one is not already showing
                 if (!_interactionPromptUI.IsDisplayed)
                 {
-                    _interactionPromptUI.SetUp(_interactable.InteractionPrompt, _colliders[0].transform.position);
+                  
+                    _interactionPromptUI.SetUp(_interactable.InteractionPrompt, _colliders[0].transform.position + Vector3.up * 2 );
                 }
 
                 if (Keyboard.current.eKey.wasPressedThisFrame)              // Change this to work with Game Input Actions instead of just e key     
