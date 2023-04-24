@@ -33,6 +33,7 @@ public class UI_Inventory : MonoBehaviour
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
         RefreshInventoryItems();
+       
     }
 
     private void RefreshInventoryItems()
@@ -56,10 +57,10 @@ public class UI_Inventory : MonoBehaviour
             }*/
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
-            /*itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
                 inventory.UseItem(item);
-            };*/
+            };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
@@ -88,6 +89,11 @@ public class UI_Inventory : MonoBehaviour
         {
             inventory.UseItem(item);
         }
+    }
+
+    public Inventory getInventory()
+    {
+        return this.inventory;
     }
 
     
