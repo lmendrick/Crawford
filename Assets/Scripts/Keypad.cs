@@ -90,6 +90,7 @@ public class Keypad : MonoBehaviour
             Debug.Log("Success!");
             correctCode = true;
             Destroy(keypadDoor);
+            this.transform.parent.gameObject.SetActive(false);
         }
         else
         {

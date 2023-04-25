@@ -59,11 +59,6 @@ public class KeypadDoor : MonoBehaviour, IInteractable
 
         }
 
-        if (gameObject.IsDestroyed())
-        {
-            _keypad.SetActive(false);
-            _keypadEnabled = false;
-        }
         
     }
     
