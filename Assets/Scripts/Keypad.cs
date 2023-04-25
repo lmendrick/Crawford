@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,12 @@ public class Keypad : MonoBehaviour
     public GameObject button9;
     public GameObject enterButton;
     public GameObject clearButton;
+
+
+    private void Awake()
+    {
+        charHolder.text = "";
+    }
 
     public void b1()
     {
