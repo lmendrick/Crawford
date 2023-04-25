@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Random = System.Random;
+
 
 public class Keypad : MonoBehaviour
 {
@@ -25,13 +27,20 @@ public class Keypad : MonoBehaviour
     
     public bool correctCode = false;
 
+    private String newCode = "";
+
 
     private void Awake()
     {
         charHolder.text = "";
+        Random rnd = new Random();
+        String code = (rnd.Next(1000, 9999).ToString());
+        char replaceNum = (char)(rnd.Next(49, 57));
+        newCode = code.Replace('0', replaceNum);
+        Debug.Log(newCode);
     }
 
-
+    
 
     public void b1()
     {
@@ -85,7 +94,7 @@ public class Keypad : MonoBehaviour
 
     public void enterEvent()
     {
-        if (charHolder.text == "1234")
+        if (charHolder.text == newCode)
         {
             Debug.Log("Success!");
             correctCode = true;
