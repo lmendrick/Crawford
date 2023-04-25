@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9dd2745e00ef44f4c9ae358b6e7d8b79
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - pfItemWorld: {instanceID: 0}
+  - item1Sprite: {instanceID: 0}
+  - item2Sprite: {instanceID: 0}
+  - Key: {instanceID: 0}
+  - puzzleP1: {instanceID: 0}
+  - puzzleP2: {instanceID: 0}
+  - puzzleP3: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
