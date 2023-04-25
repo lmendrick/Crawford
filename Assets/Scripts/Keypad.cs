@@ -20,11 +20,18 @@ public class Keypad : MonoBehaviour
     public GameObject enterButton;
     public GameObject clearButton;
 
+    [SerializeField] private GameObject keypadDoor;
+    
+    
+    public bool correctCode = false;
+
 
     private void Awake()
     {
         charHolder.text = "";
     }
+
+
 
     public void b1()
     {
@@ -81,10 +88,14 @@ public class Keypad : MonoBehaviour
         if (charHolder.text == "1234")
         {
             Debug.Log("Success!");
+            correctCode = true;
+            Destroy(keypadDoor);
         }
         else
         {
             Debug.Log("Failed");
         }
     }
+
+
 }
