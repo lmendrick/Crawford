@@ -19,7 +19,7 @@ public class ItemOverlay : MonoBehaviour
         {
             exitOverlay();
         };
-        ItemImage = transform.Find("ItemImage");
+        ItemImage = transform.Find("Image");
     }
 
     private void FixedUpdate()

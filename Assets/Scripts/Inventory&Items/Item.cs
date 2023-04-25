@@ -46,6 +46,12 @@ public class Item {
                 case ItemType.Key:
           
                     return false;
+                case ItemType.puzzleP1:
+                    return false;
+                case ItemType.puzzleP2:
+                    return false;
+                case ItemType.puzzleP3:
+                    return false;
         }
     }
  }
