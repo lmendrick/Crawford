@@ -34,6 +34,24 @@ public class Item {
         }
 
     }
+    public Sprite GetPopUpSprite()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.Item1: return ItemPopUpAssets.Instance.item1Sprite;
+            case ItemType.Item2: return ItemPopUpAssets.Instance.item2Sprite;
+            case ItemType.Key: return ItemPopUpAssets.Instance.Key;
+            case ItemType.puzzleP1: return ItemPopUpAssets.Instance.puzzleP1;
+            case ItemType.puzzleP2: return ItemPopUpAssets.Instance.puzzleP2;
+            case ItemType.puzzleP3: return ItemPopUpAssets.Instance.puzzleP3;
+           
+        }
+
+    }
+
+
+  
 
     public bool IsStackable()
     {

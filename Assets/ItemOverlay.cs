@@ -13,9 +13,10 @@ public class ItemOverlay : MonoBehaviour
     private Item item;
 
     [SerializeField] private Image image;
+    [SerializeField] private TextMeshProUGUI text;
     
-
-    private Transform ItemImage;
+    
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,7 +24,7 @@ public class ItemOverlay : MonoBehaviour
         {
             exitOverlay();
         };
-        ItemImage = transform.Find("Image");
+        
     }
 
     private void FixedUpdate()
@@ -43,10 +44,9 @@ public class ItemOverlay : MonoBehaviour
     public void setItem(Item i)
     {
         item = new Item { itemType = i.itemType, amount = 1 };
-        //RectTransform overlaySlotRectTransform = Instantiate(this).GetComponent<RectTransform>();
-        //Image image = overlaySlotRectTransform.Find("Image").GetComponent<Image>();
-        image.sprite = item.GetSprite();
+        image.sprite = item.GetPopUpSprite();
+        text.SetText("1");
         
-    
+
     }
 }
