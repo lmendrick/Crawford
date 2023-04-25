@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     protected void Awake()
     {
         inventory = new Inventory(UseItem);
-        _uiInventory.SetInventory(inventory);
         input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
         ItemOverlay.SetActive(false);
@@ -37,6 +36,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void Start()
+    {
+        _uiInventory.SetInventory(inventory);
+    }
+
 
     private void UseItem(Item item)
     {
@@ -44,7 +48,23 @@ public class PlayerController : MonoBehaviour
         {
             case Item.ItemType.Key:
                 ItemOverlay.SetActive(true);
-                inventory.RemoveItem(new Item { itemType = Item.ItemType.Item1, amount = 1 });
+                //inventory.RemoveItem(new Item { itemType = Item.ItemType.Key, amount = 1 });
+                break;
+            case Item.ItemType.puzzleP1:
+                ItemOverlay.SetActive(true);
+                //inventory.RemoveItem(new Item { itemType = Item.ItemType.puzzleP1, amount = 1 });
+                break;
+            case Item.ItemType.puzzleP2:
+                ItemOverlay.SetActive(true);
+                //inventory.RemoveItem(new Item { itemType = Item.ItemType.puzzleP2, amount = 1 });
+                break;
+            case Item.ItemType.puzzleP3:
+                ItemOverlay.SetActive(true);
+                //inventory.RemoveItem(new Item { itemType = Item.ItemType.puzzleP3, amount = 1 });
+                break;
+            case Item.ItemType.Item1:
+                ItemOverlay.SetActive(true);
+                //inventory.RemoveItem(new Item { itemType = Item.ItemType.Item1, amount = 1 });
                 break;
         }
         
@@ -57,7 +77,6 @@ public class PlayerController : MonoBehaviour
         if (itemWorld != null)
         {
             inventory.AddItem(itemWorld.GetItem());
-            Debug.Log("Item Added");
             itemWorld.DestroySelf();
         }
     }
@@ -78,7 +97,6 @@ public class PlayerController : MonoBehaviour
         if (input.actions["Inventory"].WasPressedThisFrame())
         {
             
-            Debug.Log("Inv");
             if (!InvIsOpen)
             {
                 InvGUI.SetActive(true);

@@ -9,6 +9,8 @@ using UnityEngine.UI;
 
 public class UI_Inventory : MonoBehaviour
 {
+    [SerializeField] private ItemOverlay _itemOverlay;
+    
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
@@ -38,28 +40,26 @@ public class UI_Inventory : MonoBehaviour
 
     private void RefreshInventoryItems()
     {
-      
-        /*if (!isOpen)
+        foreach (Transform child in itemSlotContainer)
         {
-            return;
-        }*/
-
+            if (child == itemSlotTemplate) continue;
+            Destroy(child.gameObject);
+        }
+      
+        
         int x = 0;
         int y = 0;
-        float itemSlotCellSize = 30f;
+        float itemSlotCellSize = 70f;
         foreach (Item item in inventory.GetItemList())
         {
-            Debug.Log(inventory.GetItemList().Count);
-           /* foreach (Transform child in itemSlotContainer)
-            {
-                if (child == itemSlotTemplate) continue;
-                Destroy(gameObject);
-            }*/
+
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
+                _itemOverlay.setItem(item);
                 inventory.UseItem(item);
+                
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
@@ -78,10 +78,10 @@ public class UI_Inventory : MonoBehaviour
             }*/
             
             x++;
-            if (x > 4)
+            if (x > 3)
             {
                 x = 0;
-                y++;
+                y--;
             }
         }
 

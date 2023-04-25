@@ -10,14 +10,10 @@ public class Item {
     {
         Item1,
         Item2,
-        Item3,
-        Item4,
-        Item5,
         Key,
-        PuzzlePart1,
-        PuzzlePart2,
-        PuzzlePart3
-    
+        puzzleP1,
+        puzzleP2,
+        puzzleP3
     }
 
     public ItemType itemType;
@@ -30,10 +26,11 @@ public class Item {
             default:
             case ItemType.Item1: return ItemAssets.Instance.item1Sprite;
             case ItemType.Item2: return ItemAssets.Instance.item2Sprite;
-            case ItemType.Item3: return ItemAssets.Instance.item3Sprite;
-            case ItemType.Item4: return ItemAssets.Instance.item4Sprite;
-            case ItemType.Item5: return ItemAssets.Instance.item5Sprite;
-            case ItemType.Key: return ItemAssets.Instance.keySprite;
+            case ItemType.Key: return ItemAssets.Instance.Key;
+            case ItemType.puzzleP1: return ItemAssets.Instance.puzzleP1;
+            case ItemType.puzzleP2: return ItemAssets.Instance.puzzleP2;
+            case ItemType.puzzleP3: return ItemAssets.Instance.puzzleP3;
+           
         }
 
     }
@@ -46,10 +43,8 @@ public class Item {
                 case ItemType.Item1:
                 return true;
                 case ItemType.Item2:
-                case ItemType.Item3:
-                case ItemType.Item4:
-                case ItemType.Item5:
                 case ItemType.Key:
+          
                     return false;
         }
     }
