@@ -7,9 +7,13 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+
 public class ItemOverlay : MonoBehaviour
 {
     private Item item;
+
+    [SerializeField] private Image image;
+    
 
     private Transform ItemImage;
     // Start is called before the first frame update
@@ -39,9 +43,10 @@ public class ItemOverlay : MonoBehaviour
     public void setItem(Item i)
     {
         item = new Item { itemType = i.itemType, amount = 1 };
-        RectTransform overlaySlotRectTransform = Instantiate(this).GetComponent<RectTransform>();
-        Image image = overlaySlotRectTransform.Find("Image").GetComponent<Image>();
+        //RectTransform overlaySlotRectTransform = Instantiate(this).GetComponent<RectTransform>();
+        //Image image = overlaySlotRectTransform.Find("Image").GetComponent<Image>();
         image.sprite = item.GetSprite();
+        
     
     }
 }
