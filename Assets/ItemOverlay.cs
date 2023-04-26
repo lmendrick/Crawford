@@ -61,7 +61,7 @@ public class ItemOverlay : MonoBehaviour
             Char num = (_keypad.GetCode())[2];
             text.SetText(num.ToString());
         }
-        else if (item.itemType == Item.ItemType.puzzleP3)
+        else if (item.itemType == Item.ItemType.puzzleP4)
         {
             Char num = (_keypad.GetCode())[3];
             text.SetText(num.ToString());
