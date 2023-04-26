@@ -13,8 +13,7 @@ public class ItemAssets : MonoBehaviour
 
     public Transform pfItemWorld;
 
-    public Sprite item1Sprite;
-    public Sprite item2Sprite;
+    public Sprite Crowbar;
     public Sprite Key;
     public Sprite puzzleP1;
     public Sprite puzzleP2;
