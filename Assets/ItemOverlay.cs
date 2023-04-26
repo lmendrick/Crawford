@@ -14,7 +14,7 @@ public class ItemOverlay : MonoBehaviour
 
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private Keypad _keypad;
+    [SerializeField] private KeypadDoor _keypad;
     
     
     
@@ -48,17 +48,22 @@ public class ItemOverlay : MonoBehaviour
         image.sprite = item.GetPopUpSprite();
         if (item.itemType == Item.ItemType.puzzleP1)
         {
-            Char num = (_keypad.getNewCode())[0];
+            Char num = (_keypad.GetCode())[0];
             text.SetText(num.ToString());
         }
         else if (item.itemType == Item.ItemType.puzzleP2)
         {
-            Char num = (_keypad.getNewCode())[1];
+            Char num = (_keypad.GetCode())[1];
             text.SetText(num.ToString());
         }
         else if (item.itemType == Item.ItemType.puzzleP3)
         {
-            Char num = (_keypad.getNewCode())[2];
+            Char num = (_keypad.GetCode())[2];
+            text.SetText(num.ToString());
+        }
+        else if (item.itemType == Item.ItemType.puzzleP3)
+        {
+            Char num = (_keypad.GetCode())[3];
             text.SetText(num.ToString());
         }
 

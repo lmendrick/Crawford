@@ -22,26 +22,33 @@ public class Keypad : MonoBehaviour
     public GameObject enterButton;
     public GameObject clearButton;
 
-    [SerializeField] private KeypadDoor keypadDoor;
-    
+
+    [SerializeField] private KeypadDoor _keypadDoor;
+
+
+    private String _newCode;
+
     
     public bool correctCode = false;
 
-    private String newCode = "";
-
+    
+    
 
     private void Awake()
     {
         charHolder.text = "";
-        Random rnd = new Random();
-        String code = (rnd.Next(1000, 9999).ToString());
-        char replaceNum = (char)(rnd.Next(49, 57));
-        newCode = code.Replace('0', replaceNum);
-        Debug.Log(newCode);
+
+        //_newCode = _keypadDoor.GetCode();
+
+        // Random rnd = new Random();
+        // String code = (rnd.Next(1000, 9999).ToString());
+        // char replaceNum = (char)(rnd.Next(49, 57));
+        // newCode = code.Replace('0', replaceNum);
+        // Debug.Log(newCode);
+
     }
 
     
-
     public void b1()
     {
         charHolder.text += "1";
@@ -94,11 +101,13 @@ public class Keypad : MonoBehaviour
 
     public void enterEvent()
     {
-        if (charHolder.text == newCode)
+        if (charHolder.text == _keypadDoor.GetCode())
         {
             Debug.Log("Success!");
             correctCode = true;
-            Destroy(keypadDoor.gameObject);
+
+            Destroy(_keypadDoor.gameObject);
+
             this.transform.parent.gameObject.SetActive(false);
         }
         else
@@ -107,9 +116,5 @@ public class Keypad : MonoBehaviour
         }
     }
 
-    public String getNewCode()
-    {
-        return newCode;
-    }
-
+  
 }

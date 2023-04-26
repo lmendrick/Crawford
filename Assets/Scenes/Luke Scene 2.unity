@@ -1949,6 +1949,10 @@ PrefabInstance:
       propertyPath: keypadDoor
       value: 
       objectReference: {fileID: 585719595}
+    - target: {fileID: 2274607373858940883, guid: f2eb4693bd39a25478b839f9c5f4d30b, type: 3}
+      propertyPath: _keypadDoor
+      value: 
+      objectReference: {fileID: 585719596}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2eb4693bd39a25478b839f9c5f4d30b, type: 3}
 --- !u!114 &4327037219960223396
