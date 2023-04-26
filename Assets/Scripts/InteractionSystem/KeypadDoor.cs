@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class KeypadDoor : MonoBehaviour, IInteractable
 {
@@ -20,7 +21,18 @@ public class KeypadDoor : MonoBehaviour, IInteractable
 
     private Inventory _inventory;
     
+    private String newCode = "";
 
+    private void Awake()
+    {
+        
+        Random rnd = new Random();
+        String code = (rnd.Next(1000, 9999).ToString());
+        char replaceNum = (char)(rnd.Next(49, 57));
+        newCode = code.Replace('0', replaceNum);
+        Debug.Log(newCode);
+        
+    }
     
     
     public bool Interact(Interactor interactor)
@@ -60,6 +72,11 @@ public class KeypadDoor : MonoBehaviour, IInteractable
         }
 
         
+    }
+
+    public String GetCode()
+    {
+        return newCode;
     }
     
 }
