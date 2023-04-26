@@ -7,7 +7,8 @@ public class Chest : MonoBehaviour, IInteractable
 
     [SerializeField] private string _prompt;
 
-
+    public Item item;
+    
     
     public string InteractionPrompt => _prompt;
 
@@ -22,7 +23,7 @@ public class Chest : MonoBehaviour, IInteractable
 public bool Interact(Interactor interactor)
 {
     if (!hasBeenOpened){
-        ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Key, amount =1});
+        ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount =1});
         hasBeenOpened = true;
         return true;
         
