@@ -2952,7 +2952,7 @@ MonoBehaviour:
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 1353754953}
   _interactionPoint: {fileID: 4327037219946354890}
-  _interactionPointRadius: 2
+  _interactionPointRadius: 1
   _interactableMask:
     serializedVersion: 2
     m_Bits: 64
