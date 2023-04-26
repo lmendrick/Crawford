@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
                 ItemOverlay.SetActive(true);
                 //inventory.RemoveItem(new Item { itemType = Item.ItemType.puzzleP3, amount = 1 });
                 break;
+            case Item.ItemType.puzzleP4:
+                ItemOverlay.SetActive(true);
+                break;
             case Item.ItemType.Item1:
                 ItemOverlay.SetActive(true);
                 //inventory.RemoveItem(new Item { itemType = Item.ItemType.Item1, amount = 1 });
