@@ -6,6 +6,7 @@ public class Chest : MonoBehaviour, IInteractable
 {
 
     [SerializeField] private string _prompt;
+    public Item item;
 
 
     
