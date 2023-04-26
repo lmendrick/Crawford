@@ -14,6 +14,7 @@ public class ItemOverlay : MonoBehaviour
 
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private Keypad _keypad;
     
     
     
@@ -45,8 +46,22 @@ public class ItemOverlay : MonoBehaviour
     {
         item = new Item { itemType = i.itemType, amount = 1 };
         image.sprite = item.GetPopUpSprite();
-        text.SetText("1");
-        
+        if (item.itemType == Item.ItemType.puzzleP1)
+        {
+            Char num = (_keypad.getNewCode())[0];
+            text.SetText(num.ToString());
+        }
+        else if (item.itemType == Item.ItemType.puzzleP2)
+        {
+            Char num = (_keypad.getNewCode())[1];
+            text.SetText(num.ToString());
+        }
+        else if (item.itemType == Item.ItemType.puzzleP3)
+        {
+            Char num = (_keypad.getNewCode())[2];
+            text.SetText(num.ToString());
+        }
+
 
     }
 }

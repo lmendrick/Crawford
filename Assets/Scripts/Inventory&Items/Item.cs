@@ -13,7 +13,8 @@ public class Item {
         Key,
         puzzleP1,
         puzzleP2,
-        puzzleP3
+        puzzleP3,
+        puzzleP4
     }
 
     public ItemType itemType;
@@ -30,6 +31,7 @@ public class Item {
             case ItemType.puzzleP1: return ItemAssets.Instance.puzzleP1;
             case ItemType.puzzleP2: return ItemAssets.Instance.puzzleP2;
             case ItemType.puzzleP3: return ItemAssets.Instance.puzzleP3;
+            case ItemType.puzzleP4: return ItemAssets.Instance.puzzleP4;
            
         }
 
@@ -45,6 +47,7 @@ public class Item {
             case ItemType.puzzleP1: return ItemPopUpAssets.Instance.puzzleP1;
             case ItemType.puzzleP2: return ItemPopUpAssets.Instance.puzzleP2;
             case ItemType.puzzleP3: return ItemPopUpAssets.Instance.puzzleP3;
+            case ItemType.puzzleP4: return ItemPopUpAssets.Instance.puzzleP4;
            
         }
 
@@ -69,6 +72,8 @@ public class Item {
                 case ItemType.puzzleP2:
                     return false;
                 case ItemType.puzzleP3:
+                    return false;
+                case ItemType.puzzleP4:
                     return false;
         }
     }

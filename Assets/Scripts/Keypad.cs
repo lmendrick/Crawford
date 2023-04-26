@@ -22,7 +22,7 @@ public class Keypad : MonoBehaviour
     public GameObject enterButton;
     public GameObject clearButton;
 
-    [SerializeField] private GameObject keypadDoor;
+    [SerializeField] private KeypadDoor keypadDoor;
     
     
     public bool correctCode = false;
@@ -98,7 +98,7 @@ public class Keypad : MonoBehaviour
         {
             Debug.Log("Success!");
             correctCode = true;
-            Destroy(keypadDoor);
+            Destroy(keypadDoor.gameObject);
             this.transform.parent.gameObject.SetActive(false);
         }
         else
@@ -107,5 +107,9 @@ public class Keypad : MonoBehaviour
         }
     }
 
+    public String getNewCode()
+    {
+        return newCode;
+    }
 
 }

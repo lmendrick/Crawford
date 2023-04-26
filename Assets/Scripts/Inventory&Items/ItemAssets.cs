@@ -19,4 +19,5 @@ public class ItemAssets : MonoBehaviour
     public Sprite puzzleP1;
     public Sprite puzzleP2;
     public Sprite puzzleP3;
+    public Sprite puzzleP4;
 }
