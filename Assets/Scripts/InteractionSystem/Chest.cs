@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Gab.Scripts;
 using UnityEngine;
 
 public class Chest : MonoBehaviour, IInteractable
 {
 
     [SerializeField] private string _prompt;
-    public Item item;
     
+    [SerializeField] private GabConversationSo _conversation;
+
+    public Item item;
     
     
     public string InteractionPrompt => _prompt;
@@ -25,6 +28,9 @@ public bool Interact(Interactor interactor)
     if (!hasBeenOpened){
         ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount =1});
         hasBeenOpened = true;
+        
+        GabManager.StartNew(_conversation);
+        
         return true;
         
         
