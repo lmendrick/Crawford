@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829b23b0b6da743779132bab49083af0, type: 3}
+  m_Name: NPC_Test
+  m_EditorClassIdentifier: 
+  passageDictionary:
+    keyData:
+    - Start
+    - I just need to throw something away
+    - I was wondering if you knew how to open that door over there...
+    - Huh, guess I need to look around. Thanks!
+    valueData:
+    - 'What do you want? I''m a trashcan for christs sake!
+
+      [[I just need to
+      throw something away]]
+
+      [[I was wondering if you knew how to open that
+      door over there...]]
+
+'
+    - 'Get out of here, I''m full!
+
+'
+    - 'Oh yeah that door...I''m pretty sure I saw one of the guys inside
+
+      rip
+      up some paper and throw it away.
+
+      [[Huh, guess I need to look around.
+      Thanks!]]
+
+      [[I have some trash for you to eat->I just need to throw something
+      away]]
+
+'
+    - 'Yeah, whatever...
+
+'

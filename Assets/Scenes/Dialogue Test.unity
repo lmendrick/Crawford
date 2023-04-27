@@ -1902,8 +1902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfItemWorld: {fileID: 3478620447464382651, guid: d42e15b3f18f01c4c88cf837faf6776b, type: 3}
-  item1Sprite: {fileID: -2413806693520163455, guid: 70766f66bbdb13b42af16a66e8e7ef3d, type: 3}
-  item2Sprite: {fileID: -2413806693520163455, guid: 70766f66bbdb13b42af16a66e8e7ef3d, type: 3}
+  Crowbar: {fileID: 0}
   Key: {fileID: 21300000, guid: f9ffa6615351484479b2826bb1d2a5a2, type: 3}
   puzzleP1: {fileID: -1544989971, guid: 4c96340949832da40a10718b700c3d22, type: 3}
   puzzleP2: {fileID: -2100279090, guid: 4c96340949832da40a10718b700c3d22, type: 3}
@@ -4318,10 +4317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cdd4c0e11b4a9645b0b9e19f729cdf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prompt: Search Dumpster
+  _prompt: Search Trashcan
   _conversation: {fileID: 11400000, guid: 44535cb1debf3b34da34d4a824185416, type: 2}
   item:
-    itemType: 6
+    itemType: 2
     amount: 1
 --- !u!61 &1485830506
 BoxCollider2D:
@@ -4572,8 +4571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfItemWorld: {fileID: 3478620447464382651, guid: d42e15b3f18f01c4c88cf837faf6776b, type: 3}
-  item1Sprite: {fileID: 21300000, guid: a0e35f6b808bb7447826cc6c69ffe448, type: 3}
-  item2Sprite: {fileID: 7482667652216324306, guid: 8de70350514d831409d72cc6740f00a0, type: 3}
+  Crowbar: {fileID: 0}
   Key: {fileID: 21300000, guid: f9ffa6615351484479b2826bb1d2a5a2, type: 3}
   puzzleP1: {fileID: 21300000, guid: 6f2eb6ba06558ec48bd16a620752a70f, type: 3}
   puzzleP2: {fileID: 21300000, guid: 6f2eb6ba06558ec48bd16a620752a70f, type: 3}
@@ -4981,7 +4979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompt: Talk to Trashcan
-  _conversation: {fileID: 11400000, guid: 44535cb1debf3b34da34d4a824185416, type: 2}
+  _conversation: {fileID: 11400000, guid: 06a891f80902f194eae1d4b9a61d1ee2, type: 2}
+  _conversation2: {fileID: 11400000, guid: 90eb6eac244ba6f499d5539d54af1c2f, type: 2}
   item:
     itemType: 6
     amount: 1
@@ -6184,7 +6183,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a9121b146a92f2946a12267349ef452b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

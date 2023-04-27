@@ -9,6 +9,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     [SerializeField] private GabConversationSo _conversation;
     
+    [SerializeField] private GabConversationSo _conversation2;
+    
 
     public Item item;
     
@@ -17,7 +19,7 @@ public class NPC : MonoBehaviour, IInteractable
 
 
     
-    private bool hasBeenOpened= false;
+    private bool hasBeenTalkedTo = false;
     
     
 
@@ -25,9 +27,9 @@ public class NPC : MonoBehaviour, IInteractable
     
     public bool Interact(Interactor interactor)
     {
-        if (!hasBeenOpened){
-            ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount =1});
-            hasBeenOpened = true;
+        if (!hasBeenTalkedTo){
+            //ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount =1});
+            hasBeenTalkedTo = true;
             
             
             GabManager.StartNew(_conversation);
@@ -41,6 +43,10 @@ public class NPC : MonoBehaviour, IInteractable
             // inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount =1});
             Debug.Log("You found a key!");                    //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
             // if (itemSpawn == null) return false;
+        }
+        else
+        {
+            GabManager.StartNew(_conversation2);
         }
         
    

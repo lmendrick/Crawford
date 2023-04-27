@@ -31,6 +31,8 @@ public bool Interact(Interactor interactor)
         
         GabManager.StartNew(_conversation);
         
+        Invoke(nameof(CallGabEnd), 2);
+        
         return true;
         
         
@@ -56,4 +58,10 @@ public bool Interact(Interactor interactor)
         
     return false;
     }
+
+private void CallGabEnd()
+{
+    GabManager.End();
+}
+
 }
