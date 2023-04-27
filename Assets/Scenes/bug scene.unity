@@ -504,6 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompt: Search Chest
+  _conversation: {fileID: 0}
   item:
     itemType: 0
     amount: 0
