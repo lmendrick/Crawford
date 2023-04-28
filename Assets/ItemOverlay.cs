@@ -49,22 +49,22 @@ public class ItemOverlay : MonoBehaviour
         if (item.itemType == Item.ItemType.puzzleP1)
         {
             Char num = (_keypad.GetCode())[0];
-            text.SetText(num.ToString());
+            text.SetText("blah blah blah blah " +  num.ToString() + "blah blah blah blah");
         }
         else if (item.itemType == Item.ItemType.puzzleP2)
         {
             Char num = (_keypad.GetCode())[1];
-            text.SetText(num.ToString());
+            text.SetText("blah blah blah blah " +  num.ToString() + "blah blah blah blah");
         }
         else if (item.itemType == Item.ItemType.puzzleP3)
         {
             Char num = (_keypad.GetCode())[2];
-            text.SetText(num.ToString());
+            text.SetText("blah blah blah blah " +  num.ToString() + "blah blah blah blah");
         }
         else if (item.itemType == Item.ItemType.puzzleP4)
         {
             Char num = (_keypad.GetCode())[3];
-            text.SetText(num.ToString());
+            text.SetText("blah blah blah blah " +  num.ToString() + "blah blah blah blah");
         }
 
 
