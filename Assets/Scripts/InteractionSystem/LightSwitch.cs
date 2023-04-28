@@ -32,6 +32,11 @@ public class LightSwitch : MonoBehaviour, IInteractable
         }
         return true;
     }
+
+    public bool GetLightIsOn()
+    {
+        return lightIsOn;
+    }
 }
 
 

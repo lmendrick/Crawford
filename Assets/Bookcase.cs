@@ -6,6 +6,8 @@ using UnityEngine;
 public class Bookcase : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
+    [SerializeField] private LightSwitch _light;
+    
 
     private bool hasCrowbar;
     private bool lightIsOn;
@@ -25,20 +27,19 @@ public class Bookcase : MonoBehaviour, IInteractable
         
         foreach (Item item in _inventory.GetItemList())  
         {
-            if (item.itemType == Item.ItemType.Crowbar)
+            if (item.itemType == Item.ItemType.Crowbar && _light.GetLightIsOn())
             {
                 Debug.Log("Opening Door!");
-                Destroy(gameObject);
-                hasCrowbar.Equals(true);
+                transform.position += Vector3.left * 2;
                 return true;
             }
         }
         
-        transform.position += Vector3.left * 2;
-        if (hasCrowbar && lightIsOn)
-        {
-            transform.position += Vector3.left * 2;
-        }
+        // transform.position += Vector3.left * 2;
+        // if (hasCrowbar && lightIsOn)
+        // {
+        //     transform.position += Vector3.left * 2;
+        // }
         return true;
     }
 }
