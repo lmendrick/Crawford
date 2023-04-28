@@ -61,11 +61,11 @@ public class ItemOverlay : MonoBehaviour
         {
             Char num = (_keypad.GetCode())[1];
             text.SetText("Around " + num.ToString() +
-                         " o'clock, the boys came in with some detective fella. Apparently the boss wanted him for some questioning, stuck his snout where it shouldn’t’ have been.");
+                         " o'clock, the boys came in with some detective fella. Apparently the boss wanted him for some questioning, stuck his snout where it shouldn’t have been.");
             rectTransform.SetLocalPositionAndRotation(new Vector3(-49,39), quaternion.identity);
             rectTransform.sizeDelta = new Vector2(146,0);
             text.fontSize = 16;
-            //text.SetText( num.ToString());
+            
         }
         else if (item.itemType == Item.ItemType.puzzleP3)
         {
@@ -75,12 +75,12 @@ public class ItemOverlay : MonoBehaviour
             rectTransform.SetLocalPositionAndRotation(new Vector3(-78,17), quaternion.identity);
             rectTransform.sizeDelta = new Vector2(93,0);
             text.fontSize = 16;
-            //text.SetText( num.ToString());
+            
         }
         else if (item.itemType == Item.ItemType.puzzleP4)
         {
             Char num = (_keypad.GetCode())[3];
-            //text.SetText( num.ToString());
+           
             rectTransform.SetLocalPositionAndRotation(new Vector3(24,-22), quaternion.identity);
             rectTransform.sizeDelta = new Vector2(190,0);
             text.fontSize = 18;

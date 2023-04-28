@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,10 @@ public class LightSwitch : MonoBehaviour, IInteractable
 
     public string InteractionPrompt => _prompt;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        light.SetActive(false);
+    }
 
     public bool Interact(Interactor interactor)
     {
