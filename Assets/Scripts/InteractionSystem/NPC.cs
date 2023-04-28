@@ -27,7 +27,7 @@ public class NPC : MonoBehaviour, IInteractable
     
     public bool Interact(Interactor interactor)
     {
-        if (!hasBeenTalkedTo){
+        // if (!hasBeenTalkedTo){
             //ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount =1});
             hasBeenTalkedTo = true;
             
@@ -43,11 +43,11 @@ public class NPC : MonoBehaviour, IInteractable
             // inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount =1});
             Debug.Log("You found a key!");                    //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
             // if (itemSpawn == null) return false;
-        }
-        else
-        {
-            GabManager.StartNew(_conversation2);
-        }
+        //}
+        // else
+        // {
+        //     GabManager.StartNew(_conversation2);
+        // }
         
    
         

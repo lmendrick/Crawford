@@ -9,8 +9,8 @@ public class GabController : MonoBehaviour
     [SerializeField] private GabConversationSo _conversation;
     void Update()
     {
-        if (_conversation != null && Input.GetKeyDown(KeyCode.Return)) 
-            GabManager.StartNew(_conversation);
+        // if (_conversation != null && Input.GetKeyDown(KeyCode.Return)) 
+        //     GabManager.StartNew(_conversation);
         
         if (!GabManager.IsShowingConversation) return;
         

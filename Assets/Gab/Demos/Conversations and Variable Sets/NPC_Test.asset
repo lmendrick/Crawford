@@ -15,34 +15,45 @@ MonoBehaviour:
   passageDictionary:
     keyData:
     - Start
-    - I just need to throw something away
-    - I was wondering if you knew how to open that door over there...
-    - Huh, guess I need to look around. Thanks!
+    - Nah, you look like the one who needs help.
+    - I'm looking for someone, looks a lot like me, fellow detective, went missing
+      a few days ago.
+    - He was last seen at this bar. Do you know how to get in there?
+    - Thanks anyways, and I suggest you find a better use of your time than hanging
+      out in an alleyway
+    - Hmm...I better look around. I appreciate the information.
     valueData:
-    - 'What do you want? I''m a trashcan for christs sake!
+    - 'Uh...can I help you...uh...officer?
 
-      [[I just need to
-      throw something away]]
+      [[I''m looking for someone, looks
+      a lot like me, fellow detective, went missing a few days ago.]]
 
-      [[I was wondering if you knew how to open that
-      door over there...]]
-
-'
-    - 'Get out of here, I''m full!
+      [[Nah,
+      you look like the one who needs help.]]
 
 '
-    - 'Oh yeah that door...I''m pretty sure I saw one of the guys inside
-
-      rip
-      up some paper and throw it away.
-
-      [[Huh, guess I need to look around.
-      Thanks!]]
-
-      [[I have some trash for you to eat->I just need to throw something
-      away]]
+    - 'Uh..okay then...have a good one...I guess.
 
 '
-    - 'Yeah, whatever...
+    - 'There''s an awful lot of dogs in this city. Can''t say I seen ''em.
+
+      [[He
+      was last seen at this bar. Do you know how to get in there?]]
+
+      [[Thanks
+      anyways, and I suggest you find a better use of your time than hanging out
+      in an alleyway]]
+
+'
+    - 'If I did I wouldn''t be standing out here! But now that you mention it...one
+      of those mafia looking guys from inside came out here a little while ago and
+      was throwing stuff in those trashcans, looked like he was in a hurry.
+
+      [[Hmm...I
+      better look around. I appreciate the information.]]'
+    - 'Yeah...whatever.
+
+'
+    - 'I do accept tips you know...
 
 '

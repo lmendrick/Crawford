@@ -10,6 +10,9 @@ public class Chest : MonoBehaviour, IInteractable
     
     [SerializeField] private GabConversationSo _conversation;
 
+    [SerializeField] private bool _hasItem;
+    
+
     public Item item;
     
     
@@ -20,28 +23,36 @@ public class Chest : MonoBehaviour, IInteractable
     private bool hasBeenOpened= false;
     
     
+    
+    
 
 
     
 public bool Interact(Interactor interactor)
 {
     if (!hasBeenOpened){
-        ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount =1});
-        hasBeenOpened = true;
         
         GabManager.StartNew(_conversation);
-        
+
         Invoke(nameof(CallGabEnd), 2);
         
-        return true;
-        
-        
-         /*inventory.AddItem();*/
-            Debug.Log("Opening Chest!");                    //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
-              
+        if (_hasItem)
+        {
+            ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount = 1 });
+            hasBeenOpened = true;
+
+         
+
+            return true;
+
+
+            /*inventory.AddItem();*/
+            Debug.Log("Opening Chest!"); //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
+
             // inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount =1});
-            Debug.Log("You found a key!");                    //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
-                // if (itemSpawn == null) return false;
+            Debug.Log("You found a key!"); //Add interaction here, could get inventory from interactor to check for keys etc (see door script)
+            // if (itemSpawn == null) return false;
+        }
     }
         
    
