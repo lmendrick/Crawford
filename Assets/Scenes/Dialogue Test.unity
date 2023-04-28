@@ -1795,6 +1795,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2274607373858940883, guid: f2eb4693bd39a25478b839f9c5f4d30b, type: 3}
+      propertyPath: _wall
+      value: 
+      objectReference: {fileID: 318631095}
+    - target: {fileID: 2274607373858940883, guid: f2eb4693bd39a25478b839f9c5f4d30b, type: 3}
       propertyPath: keypadDoor
       value: 
       objectReference: {fileID: 1022951030}

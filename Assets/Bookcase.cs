@@ -7,6 +7,8 @@ public class Bookcase : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
     [SerializeField] private LightSwitch _light;
+    [SerializeField] private GameObject _sprite;
+    
     
 
     private bool hasCrowbar;
@@ -30,8 +32,11 @@ public class Bookcase : MonoBehaviour, IInteractable
             if (item.itemType == Item.ItemType.Crowbar && _light.GetLightIsOn())
             {
                 Debug.Log("Opening Door!");
-                transform.position += Vector3.left * 2;
+                _sprite.transform.position += Vector3.left * 2;
+                gameObject.SetActive(false);
                 return true;
+                
+                
             }
         }
         
@@ -42,4 +47,6 @@ public class Bookcase : MonoBehaviour, IInteractable
         // }
         return true;
     }
+
+
 }
