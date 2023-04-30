@@ -28,24 +28,28 @@ public class Wire : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(newPosition, .2f);
         foreach (Collider2D collider in colliders)
         {
-            // make sure not my own collider
-            if (collider.gameObject != gameObject)
+            // Check only colliders on layer 7 "Puzzle"
+            if (collider.gameObject.layer == 7)
             {
-                // update wire to the connection point position
-                UpdateWire(collider.transform.position);
-                
-                // check if the wires are the same color
-                if (transform.parent.name.Equals(collider.transform.parent.name))
+                // make sure not my own collider
+                if (collider.gameObject != gameObject)
                 {
-                    // count connection
-                    WireMain.Instance.SwitchChange(1);
-                    
-                    // finish step
-                    collider.GetComponent<Wire>()?.Done();
-                    Done();
+                    // update wire to the connection point position
+                    UpdateWire(collider.transform.position);
+
+                    // check if the wires are the same color
+                    if (transform.parent.name.Equals(collider.transform.parent.name))
+                    {
+                        // count connection
+                        WireMain.Instance.SwitchChange(1);
+
+                        // finish step
+                        collider.GetComponent<Wire>()?.Done();
+                        Done();
+                    }
+
+                    return;
                 }
-                
-                return;
             }
         }
         
