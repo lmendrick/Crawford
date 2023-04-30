@@ -111,7 +111,7 @@ public class Keypad : MonoBehaviour
 
             Destroy(_keypadDoor.gameObject);
 
-            _wall.GetComponent<SpriteRenderer>().sortingOrder = 6;
+            _wall.GetComponent<SpriteRenderer>().sortingOrder = 3;
 
             this.transform.parent.gameObject.SetActive(false);
         }

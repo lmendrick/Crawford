@@ -46,7 +46,7 @@ public class PlayerControllerTest : MonoBehaviour
     void Update()
     {
 
-        movement.y = Input.GetAxisRaw("Vertical");
+        //movement.y = Input.GetAxisRaw("Vertical");
         movement.x = Input.GetAxisRaw("Horizontal");
 
         animator.SetFloat("xvelocity", movement.sqrMagnitude);

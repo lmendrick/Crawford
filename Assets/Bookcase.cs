@@ -32,7 +32,7 @@ public class Bookcase : MonoBehaviour, IInteractable
             if (item.itemType == Item.ItemType.Crowbar && _light.GetLightIsOn())
             {
                 Debug.Log("Opening Door!");
-                _sprite.transform.position += Vector3.left * 2;
+                _sprite.transform.position += Vector3.left * 3;
                 gameObject.SetActive(false);
                 return true;
                 
