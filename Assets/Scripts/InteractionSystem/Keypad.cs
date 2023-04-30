@@ -22,6 +22,9 @@ public class Keypad : MonoBehaviour
     public GameObject enterButton;
     public GameObject clearButton;
 
+    [SerializeField] private GameObject _wall;
+    
+
 
     [SerializeField] private KeypadDoor _keypadDoor;
 
@@ -107,6 +110,8 @@ public class Keypad : MonoBehaviour
             correctCode = true;
 
             Destroy(_keypadDoor.gameObject);
+
+            _wall.GetComponent<SpriteRenderer>().sortingOrder = 3;
 
             this.transform.parent.gameObject.SetActive(false);
         }

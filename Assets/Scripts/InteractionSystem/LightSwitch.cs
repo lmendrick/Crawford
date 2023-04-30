@@ -8,6 +8,8 @@ public class LightSwitch : MonoBehaviour, IInteractable
 
     [SerializeField] private string _prompt;
     [SerializeField] private GameObject light;
+    [SerializeField] private GameObject _bookcase;
+    
 
     private bool lightIsOn;
 
@@ -16,6 +18,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
     private void Awake()
     {
         light.SetActive(false);
+        _bookcase.SetActive(false);
     }
 
     public bool Interact(Interactor interactor)
@@ -24,11 +27,13 @@ public class LightSwitch : MonoBehaviour, IInteractable
         {
             lightIsOn = false;
             light.SetActive(false);
+            
         }
         else
         {
             lightIsOn = true;
             light.SetActive(true);
+            _bookcase.SetActive(true);
         }
         return true;
     }
