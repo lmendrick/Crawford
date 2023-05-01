@@ -46,7 +46,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
         else
         {
             GabManager.StartNew(_conversation);
-            Invoke(nameof(CallGabEnd), 2);
+            Invoke(nameof(CallGabEnd), 3);
         }
         return true;
     }

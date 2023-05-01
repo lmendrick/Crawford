@@ -34,7 +34,7 @@ public bool Interact(Interactor interactor)
         
         GabManager.StartNew(_conversation);
 
-        Invoke(nameof(CallGabEnd), 2);
+        Invoke(nameof(CallGabEnd), 3);
         
         if (_hasItem)
         {

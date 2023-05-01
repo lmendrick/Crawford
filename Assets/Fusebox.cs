@@ -44,7 +44,7 @@ public class Fusebox : MonoBehaviour, IInteractable
 
         }
         GabManager.StartNew(_conversation);
-        Invoke(nameof(CallGabEnd), 2);
+        Invoke(nameof(CallGabEnd), 3);
 
         return false;
     }
