@@ -27,6 +27,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
         {
             lightIsOn = false;
             light.SetActive(false);
+            _bookcase.SetActive(false);
             
         }
         else

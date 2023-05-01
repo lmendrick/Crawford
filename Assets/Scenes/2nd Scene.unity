@@ -2133,7 +2133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3278308873662811744, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Toolbox
       objectReference: {fileID: 0}
     - target: {fileID: 3278308873662811772, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: m_IsTrigger
@@ -2154,7 +2154,7 @@ PrefabInstance:
     - target: {fileID: 3278308873662811773, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: _conversation
       value: 
-      objectReference: {fileID: 11400000, guid: 44535cb1debf3b34da34d4a824185416, type: 2}
+      objectReference: {fileID: 11400000, guid: 2c47f74d63d3587498c40fe9c8a8cd50, type: 2}
     - target: {fileID: 3278308873662811775, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: m_RootOrder
       value: 12
