@@ -1078,6 +1078,7 @@ MonoBehaviour:
   _prompt: Open Fusebox
   _wirePuzzle: {fileID: 540661247}
   _lightSwitch: {fileID: 1588761641}
+  _conversation: {fileID: 11400000, guid: f4d0041cd5136674ca58a3253c9957d1, type: 2}
 --- !u!61 &857792071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3316,6 +3317,7 @@ MonoBehaviour:
   _prompt: Use Light Switch
   light: {fileID: 1011925774}
   _bookcase: {fileID: 408320411}
+  _conversation: {fileID: 11400000, guid: 6714f63f8f9250b4cb11dcf2a952816e, type: 2}
   FuseboxOn: 0
 --- !u!61 &1588761642
 BoxCollider2D:
@@ -4690,6 +4692,58 @@ PrefabInstance:
     - target: {fileID: 9134572708022138641, guid: e333adef815187148b8e041840a8677f, type: 3}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708155071723, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708155071723, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4184d8ee429238b4eb0ed72fcb6f884b, type: 3}
+    - target: {fileID: 9134572708155071723, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708155071723, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708155071723, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_fontSize
+      value: 72.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 72.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+    - target: {fileID: 9134572708874038953, guid: e333adef815187148b8e041840a8677f, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e333adef815187148b8e041840a8677f, type: 3}
