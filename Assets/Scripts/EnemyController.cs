@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     private WaypointPath _waypointPath;
     private Vector2 _patrolTargetPosition;
     private Animator _animator;
+    private bool NotHiding;
 
 
     // Awake is called before Start
@@ -76,36 +77,15 @@ public class EnemyController : MonoBehaviour
         //this if/else is not in the video (it was made in the GameManager videos)
         //Be sure to update the line in the if clause to match the change in the
         //video instead of adding it above
-        if (GameManager.Instance.State == GameState.Playing)
-        {
+        
             //UPDATE: how velocity is set
             //normalized reduces dir magnitude to 1, so we can
             //keep at the speed we want by multiplying
             _rb.velocity = dir.normalized * patrolSpeed; 
-        }
-        else 
-        {
-            _rb.velocity = Vector2.zero;
-        }
+      
     }
 
-    public void AcceptDefeat()
-    {
-        GameEventDispatcher.TriggerEnemyDefeated();
-        Destroy(gameObject);
-        
-        // ADD A FEATURE: Creates two small versions of the enemy when defeated
-        var smallEnemy1 = Instantiate(_smallEnemyPrefab1,
-            transform.position,
-            Quaternion.identity);
-        var smallEnemy2 = Instantiate(_smallEnemyPrefab2,
-            transform.position,
-            Quaternion.identity);
-            
-        //*CHANGE* instead of changing rigidbody velocity: 
-        //call SetDirection from BallController on new ball
-        //ball.GetComponent<BallController>().SetDirection(_facingVector);
-    }
+    
 
     public void TakeHit()
     {
@@ -114,12 +94,8 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.transform.CompareTag("Player"))
+        if (other.transform.CompareTag("Player") && !NotHiding)
         {
-            other.transform.GetComponent<HealthSystem>()?.Damage(damageAmount);
-
-            Vector2 awayDirection = other.transform.position - transform.position;
-            other.transform.GetComponent<PlayerController>()?.Recoil(awayDirection * 3f);
         }
     }
 }
