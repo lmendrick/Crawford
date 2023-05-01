@@ -27,7 +27,8 @@ public class Keypad : MonoBehaviour
 
 
     [SerializeField] private KeypadDoor _keypadDoor;
-
+    [SerializeField] private GameObject sceneChanger;
+    
 
     private String _newCode;
 
@@ -112,6 +113,7 @@ public class Keypad : MonoBehaviour
             Destroy(_keypadDoor.gameObject);
 
             _wall.GetComponent<SpriteRenderer>().sortingOrder = 3;
+            sceneChanger.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
             this.transform.parent.gameObject.SetActive(false);
         }
