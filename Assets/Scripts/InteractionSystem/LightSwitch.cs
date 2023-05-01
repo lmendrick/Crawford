@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Gab.Scripts;
 using UnityEngine;
 
 public class LightSwitch : MonoBehaviour, IInteractable
@@ -9,6 +10,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
     [SerializeField] private string _prompt;
     [SerializeField] private GameObject light;
     [SerializeField] private GameObject _bookcase;
+    [SerializeField] private GabConversationSo _conversation;
     
     
     
@@ -41,12 +43,22 @@ public class LightSwitch : MonoBehaviour, IInteractable
             light.SetActive(true);
             _bookcase.SetActive(true);
         }
+        else
+        {
+            GabManager.StartNew(_conversation);
+            Invoke(nameof(CallGabEnd), 2);
+        }
         return true;
     }
 
     public bool GetLightIsOn()
     {
         return lightIsOn;
+    }
+    
+    private void CallGabEnd()
+    {
+        GabManager.End();
     }
 }
 
