@@ -15,45 +15,42 @@ MonoBehaviour:
   passageDictionary:
     keyData:
     - Start
-    - Nah, you look like the one who needs help.
-    - I'm looking for someone, looks a lot like me, fellow detective, went missing
-      a few days ago.
-    - He was last seen at this bar. Do you know how to get in there?
-    - Thanks anyways, and I suggest you find a better use of your time than hanging
-      out in an alleyway
-    - Hmm...I better look around. I appreciate the information.
+    - What are you doing here?
+    - I'm looking for someone. A komodo dragon, went missing a while ago.
+    - Supposedly he was last seen at this bar. I need to get in.
+    - Thanks anyways, hope you have fun standin' around.
+    - I better look around. I appreciate the information.
+    - Hmph...
     valueData:
-    - 'Uh...can I help you...uh...officer?
+    - 'Whaddya want?
 
-      [[I''m looking for someone, looks
-      a lot like me, fellow detective, went missing a few days ago.]]
+      [[I''m looking for someone. A komodo dragon, went missing
+      a while ago.]]
 
-      [[Nah,
-      you look like the one who needs help.]]
-
-'
-    - 'Uh..okay then...have a good one...I guess.
+      [[What are you doing here?]]
 
 '
-    - 'There''s an awful lot of dogs in this city. Can''t say I seen ''em.
-
-      [[He
-      was last seen at this bar. Do you know how to get in there?]]
-
-      [[Thanks
-      anyways, and I suggest you find a better use of your time than hanging out
-      in an alleyway]]
+    - 'Waiting for the bar to open... What are you doing here?
 
 '
-    - 'If I did I wouldn''t be standing out here! But now that you mention it...one
-      of those mafia looking guys from inside came out here a little while ago and
-      was throwing stuff in those trashcans, looked like he was in a hurry.
+    - 'Komodo..? Can''t say I''ve seen any.
 
-      [[Hmm...I
-      better look around. I appreciate the information.]]'
-    - 'Yeah...whatever.
+      [[Supposedly he was last seen
+      at this bar. I need to get in.]]
+
+      [[Thanks anyways, hope you have fun
+      standin'' around.]]
+
+'
+    - "Hmph... \n[[more->Hmph...]]"
+    - 'Yeah... Whatever.
 
 '
     - 'I do accept tips you know...
 
 '
+    - '...I saw some shady lookin'' fella come through earlier, threw a bunch of
+      scraps away. Looked like he was in a hurry.
+
+      [[I''ll take a look around...
+      I appreciate the information.]]'
