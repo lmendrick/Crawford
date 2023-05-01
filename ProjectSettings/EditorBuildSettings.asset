@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototype Scene.unity
     guid: d6f7b18594698874c8c3d0ad0aed0142
   - enabled: 1
-    path: Assets/Scenes/Dialogue Test.unity
+    path: Assets/Scenes/1st Scene.unity
     guid: e20cbb2aa1e29df42bc0b9590c6b93a2
   m_configObjects: {}
