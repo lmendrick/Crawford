@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 280384a0b1299504bb8f19aea9290e34
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Old English Gothic Pixel
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f482caa2e7862464695663d86213c702, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
