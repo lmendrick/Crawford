@@ -16,16 +16,19 @@ MonoBehaviour:
     keyData:
     - Start
     - What are you doing here?
-    - I'm looking for someone. A komodo dragon, went missing a while ago.
-    - Supposedly he was last seen at this bar. I need to get in.
-    - Thanks anyways, hope you have fun standin' around.
-    - I better look around. I appreciate the information.
+    - komodo
+    - hmm
+    - whatever
+    - tips
     - Hmph...
+    - looking for someone
+    - He was here
+    - Thanks anyway
+    - Thanks for the information
     valueData:
     - 'Whaddya want?
 
-      [[I''m looking for someone. A komodo dragon, went missing
-      a while ago.]]
+      [[looking for someone]]
 
       [[What are you doing here?]]
 
@@ -35,11 +38,10 @@ MonoBehaviour:
 '
     - 'Komodo..? Can''t say I''ve seen any.
 
-      [[Supposedly he was last seen
-      at this bar. I need to get in.]]
+      [[He was here]]
 
-      [[Thanks anyways, hope you have fun
-      standin'' around.]]
+      [[Thanks
+      anyway]]
 
 '
     - "Hmph... \n[[more->Hmph...]]"
@@ -52,5 +54,16 @@ MonoBehaviour:
     - '...I saw some shady lookin'' fella come through earlier, threw a bunch of
       scraps away. Looked like he was in a hurry.
 
-      [[I''ll take a look around...
-      I appreciate the information.]]'
+      [[Thanks for the information]]'
+    - 'I''m looking for someone. A komodo dragon, went missing a while ago.
+
+      [[more->komodo]]'
+    - 'Supposedly he was last seen at this bar. I need to get in.
+
+      [[more->hmm]]'
+    - 'Thanks anyways, hope you have fun standin'' around.
+
+      [[more->whatever]]'
+    - 'I''ll take a look around, I appreciate the information.
+
+      [[more->tips]]'
