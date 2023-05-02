@@ -5,6 +5,8 @@ using UnityEngine.InputSystem; //Don't miss this!
 public class PlayerControllerTest : MonoBehaviour
 {
 
+    private bool Crouching;
+
     private PlayerInput input; //field to reference Player Input component
     private Rigidbody2D _rigidbody;
 
@@ -37,11 +39,6 @@ public class PlayerControllerTest : MonoBehaviour
 
     }
 
-    void AcceptDefeat()
-    {
-        Destroy(gameObject);
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -50,6 +47,23 @@ public class PlayerControllerTest : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
 
         animator.SetFloat("xvelocity", movement.sqrMagnitude);
+
+
+        if (input.actions["Crouch"].WasPressedThisFrame())
+        {
+            if(!Crouching)
+            {
+                Crouching = true;
+                animator.SetBool("isCrouched", true);
+                speed = 3f;
+            }
+            else
+            {
+                animator.SetBool("isCrouched", false);
+                Crouching = false;
+                speed = 5f;
+            }
+        }
         
     }
 
