@@ -21,7 +21,8 @@ public class EnemyController : MonoBehaviour
     private Animator _animator;
     private Vector2 movement;
     private bool NotHiding;
-    private float timeThreshold;
+    private float waitTimer;
+    
 
 
     // Awake is called before Start
@@ -35,6 +36,8 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start()
     {
+        waitTimer = patrolDelay;
+        
         if (_waypointPath)
         {
             _patrolTargetPosition = _waypointPath.GetNextWaypointPosition();
@@ -73,7 +76,14 @@ public class EnemyController : MonoBehaviour
         //time to get the next waypoint
         if (dir.magnitude <= 0.1)
         {
+            if (waitTimer > 0)
+            {
+                waitTimer -= Time.deltaTime;
+                _rb.velocity = dir.normalized * 0;
+                return;
+            }
 
+            waitTimer = patrolDelay;
             //get next waypoint
             _patrolTargetPosition = _waypointPath.GetNextWaypointPosition();
 
