@@ -860,11 +860,11 @@ PrefabInstance:
     - target: {fileID: 8030689079301986591, guid: 71054b12f4e66a34ab678cf0f01fb08e, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 47f07f83d828a9043a647ca01aab9294, type: 2}
+      objectReference: {fileID: 11400000, guid: 3471955f251bc184eb23525d7161407c, type: 2}
     - target: {fileID: 8030689079301986591, guid: 71054b12f4e66a34ab678cf0f01fb08e, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 5096434701698790994, guid: 47f07f83d828a9043a647ca01aab9294, type: 2}
+      objectReference: {fileID: -7053868063330264252, guid: 3471955f251bc184eb23525d7161407c, type: 2}
     - target: {fileID: 8030689079416723799, guid: 71054b12f4e66a34ab678cf0f01fb08e, type: 3}
       propertyPath: m_Name
       value: Quicktime Event
