@@ -74,11 +74,15 @@ public class EnemyController : MonoBehaviour
         if (dir.magnitude <= 0.1)
         {
 
-
-            Wait();
+            //get next waypoint
+            _patrolTargetPosition = _waypointPath.GetNextWaypointPosition();
 
             //change direction
             dir = _patrolTargetPosition - (Vector2)transform.position;
+
+            
+            // Flip direction of enemy and detection collider
+            Flip();
 
             
             
@@ -93,7 +97,7 @@ public class EnemyController : MonoBehaviour
             //keep at the speed we want by multiplying
             _rb.velocity = dir.normalized * patrolSpeed;
 
-            StartCoroutine(nameof(FixedUpdate));
+            
 
 
 
@@ -122,7 +126,7 @@ public class EnemyController : MonoBehaviour
     }
 
 
-    private IEnumerator Wait()
+    /*private IEnumerator Wait()
     {
        
         
@@ -132,12 +136,14 @@ public class EnemyController : MonoBehaviour
         _patrolTargetPosition = _waypointPath.GetNextWaypointPosition();
 
         //change direction
-        
+        var dir = _patrolTargetPosition - (Vector2)transform.position;
 
             
         // Flip direction of enemy and detection collider
         Flip();
-    }
+
+        yield return dir;
+    }*/
 
     private void OnCollisionEnter2D(Collision2D other)
     {
