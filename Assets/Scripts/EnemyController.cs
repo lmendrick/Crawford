@@ -93,15 +93,7 @@ public class EnemyController : MonoBehaviour
         _animator.Play("EnemyHit");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        
-        if (other.transform.CompareTag("Player") && !_player.Crouching && !Hiding)
-        {
-            Debug.Log("Found");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
+
     
     
 }
