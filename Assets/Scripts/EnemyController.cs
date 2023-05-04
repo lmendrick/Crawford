@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -10,17 +11,17 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float patrolDelay = 1;
     [SerializeField] private float patrolSpeed = 3;
     [SerializeField] private int damageAmount = 3;
+    [SerializeField] private PlayerControllerTest _player;
+    
 
-    [SerializeField] private GameObject _smallEnemyPrefab1;
-    [SerializeField] private GameObject _smallEnemyPrefab2;
-    
-    
+
 
     private Rigidbody2D _rb;
     private WaypointPath _waypointPath;
     private Vector2 _patrolTargetPosition;
     private Animator _animator;
-    private bool NotHiding;
+    
+    public  bool Hiding=false;
 
 
     // Awake is called before Start
@@ -92,11 +93,16 @@ public class EnemyController : MonoBehaviour
         _animator.Play("EnemyHit");
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.CompareTag("Player") && !NotHiding)
+        
+        if (other.transform.CompareTag("Player") && !_player.Crouching && !Hiding)
         {
+            Debug.Log("Found");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
+    
+    
 }
 
