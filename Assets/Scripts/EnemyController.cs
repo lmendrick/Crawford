@@ -9,7 +9,8 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float patrolDelay = 1;
     [SerializeField] private float patrolSpeed = 3;
-    
+
+
 
     private bool _FacingRight = true;
     
