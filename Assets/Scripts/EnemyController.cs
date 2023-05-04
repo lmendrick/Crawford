@@ -159,13 +159,16 @@ public class EnemyController : MonoBehaviour
         yield return dir;
     }*/
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         
-        if (other.transform.CompareTag("Player") && !_player.Crouching && !Hiding)
+        if (other.transform.CompareTag("Player"))
         {
             Debug.Log("Found");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (!Hiding || !_player.Crouching)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
     }
 

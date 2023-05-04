@@ -826,6 +826,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolDelay: 1
   patrolSpeed: 3
+  _player: {fileID: 4327037220607948711}
+  Hiding: 0
 --- !u!50 &1023421552
 Rigidbody2D:
   serializedVersion: 4
