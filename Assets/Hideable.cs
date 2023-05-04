@@ -20,7 +20,7 @@ public class Hideable : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
-            enemy.Hiding = false;
+           enemy.Hiding = false;
         }
     }
 }
