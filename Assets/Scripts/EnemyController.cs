@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -9,7 +10,8 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float patrolDelay = 1;
     [SerializeField] private float patrolSpeed = 3;
-
+    [SerializeField] private PlayerControllerTest _player;
+    
 
 
     private bool _FacingRight = true;
@@ -21,7 +23,7 @@ public class EnemyController : MonoBehaviour
     private Vector2 _patrolTargetPosition;
     private Animator _animator;
     private Vector2 movement;
-    private bool NotHiding;
+    public bool Hiding;
     private float waitTimer;
     
 
@@ -157,10 +159,13 @@ public class EnemyController : MonoBehaviour
         yield return dir;
     }*/
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.CompareTag("Player") && !NotHiding)
+        
+        if (other.transform.CompareTag("Player") && !_player.Crouching && !Hiding)
         {
+            Debug.Log("Found");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
