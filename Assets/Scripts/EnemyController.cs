@@ -120,6 +120,7 @@ public class EnemyController : MonoBehaviour
     {
         _animator.Play("EnemyHit");
     }
+
     
     private void Flip()
     {
@@ -162,5 +163,6 @@ public class EnemyController : MonoBehaviour
         {
         }
     }
+
 }
 
