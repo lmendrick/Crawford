@@ -18,4 +18,7 @@ MonoBehaviour:
     valueData:
     - 'The fuse box door seems to be stuck shut...
 
-'
+      (set: $pPatron to 0)
+
+      (set:
+      $pHarvey to 1)'

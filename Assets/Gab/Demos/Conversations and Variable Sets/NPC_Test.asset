@@ -32,10 +32,16 @@ MonoBehaviour:
 
       [[What are you doing here?]]
 
-'
+      (set:
+      $pPatron to 1)
+
+      (set: $pHarvey to 0)'
     - 'Waiting for the bar to open... What are you doing here?
 
-'
+      (set: $pPatron
+      to 1)
+
+      (set: $pHarvey to 0)'
     - 'Komodo..? Can''t say I''ve seen any.
 
       [[He was here]]
@@ -43,27 +49,59 @@ MonoBehaviour:
       [[Thanks
       anyway]]
 
-'
-    - "Hmph... \n[[more->Hmph...]]"
+      (set: $pPatron to 1)
+
+      (set: $pHarvey to 0)'
+    - "Hmph... \n[[more->Hmph...]]\n(set: $pPatron to 1)\n(set: $pHarvey to 0)"
     - 'Yeah... Whatever.
 
-'
+      (set: $pPatron to 1)
+
+      (set: $pHarvey to 0)'
     - 'I do accept tips you know...
 
-'
+      (set: $pPatron to 1)
+
+      (set: $pHarvey
+      to 0)'
     - '...I saw some shady lookin'' fella come through earlier, threw a bunch of
       scraps away. Looked like he was in a hurry.
 
-      [[Thanks for the information]]'
+      [[Thanks for the information]]
+
+      (set:
+      $pPatron to 1)
+
+      (set: $pHarvey to 0)'
     - 'I''m looking for someone. A komodo dragon, went missing a while ago.
 
-      [[more->komodo]]'
+      [[more->komodo]]
+
+      (set:
+      $pPatron to 0)
+
+      (set: $pHarvey to 1)'
     - 'Supposedly he was last seen at this bar. I need to get in.
 
-      [[more->hmm]]'
+      [[more->hmm]]
+
+      (set:
+      $pPatron to 0)
+
+      (set: $pHarvey to 1)'
     - 'Thanks anyways, hope you have fun standin'' around.
 
-      [[more->whatever]]'
+      [[more->whatever]]
+
+      (set:
+      $pPatron to 0)
+
+      (set: $pHarvey to 1)'
     - 'I''ll take a look around, I appreciate the information.
 
-      [[more->tips]]'
+      [[more->tips]]
+
+      (set:
+      $pPatron to 0)
+
+      (set: $pHarvey to 1)'
