@@ -12,6 +12,10 @@ public class Bookcase : MonoBehaviour, IInteractable
     [SerializeField] private GameObject _sprite;
     [SerializeField] private QT_Event pushBookcase;
     [SerializeField] private GameObject progressBar;
+    [SerializeField] private GameObject _wallSprite;
+    [SerializeField] private GameObject _sceneChanger;
+    
+    
     
     
     
@@ -28,6 +32,7 @@ public class Bookcase : MonoBehaviour, IInteractable
     private void Awake()
     {
         progressBar.SetActive(false);
+        _sceneChanger.SetActive(false);
     }
 
     public bool Interact(Interactor interactor)
@@ -60,6 +65,9 @@ public class Bookcase : MonoBehaviour, IInteractable
         {
             _sprite.transform.position += Vector3.left * 3;
             progressBar.SetActive(false);
+            _sprite.GetComponent<SpriteRenderer>().sortingOrder = 6;
+            //_wallSprite.GetComponent<SpriteRenderer>().sortingOrder = 5;
+            _sceneChanger.SetActive(true);
             gameObject.SetActive(false);
         }
     }
