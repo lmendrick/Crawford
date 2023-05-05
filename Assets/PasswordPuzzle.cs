@@ -27,6 +27,7 @@ public class PasswordPuzzle : MonoBehaviour
         charHolder3.text = "0";
         charHolder4.text = "0";
     }
+    
 
     public void up1()
     {
