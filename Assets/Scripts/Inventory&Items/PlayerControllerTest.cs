@@ -5,7 +5,7 @@ using UnityEngine.InputSystem; //Don't miss this!
 public class PlayerControllerTest : MonoBehaviour
 {
 
-    private bool Crouching;
+    public bool Crouching;
 
     private PlayerInput input; //field to reference Player Input component
     private Rigidbody2D _rigidbody;
