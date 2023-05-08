@@ -30,7 +30,7 @@ public class Password : MonoBehaviour
 
     public void display()
     {
-        list.Add(SymbolAssets.Instance.symbol1);
+        list.Add(Instantiate(SymbolAssets.Instance.symbol1));
         list.Add(SymbolAssets.Instance.symbol2);
         list.Add(SymbolAssets.Instance.symbol3);
         list.Add(SymbolAssets.Instance.symbol4);
