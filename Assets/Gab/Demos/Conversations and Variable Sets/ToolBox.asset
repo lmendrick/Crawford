@@ -16,4 +16,8 @@ MonoBehaviour:
     keyData:
     - Start
     valueData:
-    - Found a crowbar!
+    - 'A crowbar!
+
+      (set: $pPatron to 0)
+
+      (set: $pHarvey to 1)'

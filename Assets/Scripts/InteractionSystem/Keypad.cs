@@ -49,6 +49,8 @@ public class Keypad : MonoBehaviour
         // char replaceNum = (char)(rnd.Next(49, 57));
         // newCode = code.Replace('0', replaceNum);
         // Debug.Log(newCode);
+        
+        sceneChanger.SetActive(false);
 
     }
 
@@ -113,7 +115,7 @@ public class Keypad : MonoBehaviour
             Destroy(_keypadDoor.gameObject);
 
             _wall.GetComponent<SpriteRenderer>().sortingOrder = 3;
-            sceneChanger.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            sceneChanger.SetActive(true);
 
             this.transform.parent.gameObject.SetActive(false);
         }
