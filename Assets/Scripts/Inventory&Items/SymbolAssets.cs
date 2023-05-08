@@ -11,8 +11,9 @@ public class SymbolAssets : MonoBehaviour
         Instance = this;
     }
 
-    public Transform symbol1;
 
+
+    public Sprite symbol1;
     public Sprite symbol2;
     public Sprite symbol3;
     public Sprite symbol4;
