@@ -19,6 +19,7 @@ public class PasswordPuzzle : MonoBehaviour
     public GameObject downButton3;
     public GameObject upButton4;
     public GameObject downButton4;
+    public GameObject enterButton;
 
     private void Awake()
     {
@@ -162,6 +163,18 @@ public class PasswordPuzzle : MonoBehaviour
         {
             i = 9;
             charHolder4.text = i.ToString();
+        }
+    }
+
+    public void enterEvent()
+    {
+        if (charHolder1.text.Equals("1") && charHolder2.text.Equals("2") && charHolder3.text.Equals("3") && charHolder4.text.Equals("4"))
+        {
+            Debug.Log("UNLOCKED!");
+        }
+        else
+        {
+            Debug.Log("INCORRECT CODE");
         }
     }
 }
