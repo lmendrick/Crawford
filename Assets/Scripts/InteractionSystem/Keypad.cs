@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 using Random = System.Random;
 
 
@@ -21,6 +22,12 @@ public class Keypad : MonoBehaviour
     public GameObject button9;
     public GameObject enterButton;
     public GameObject clearButton;
+    
+    public GameObject redLight;
+    public GameObject greenLight;
+    [FormerlySerializedAs("incorrectCode")] public AudioSource incorrectCodeSFX;
+    public AudioSource correctCodeSFX;
+    public AudioSource doorSFX;
 
     [SerializeField] private GameObject _wall;
     
@@ -51,6 +58,11 @@ public class Keypad : MonoBehaviour
         // Debug.Log(newCode);
         
         sceneChanger.SetActive(false);
+        redLight.SetActive(false);
+        greenLight.SetActive(false);
+        incorrectCodeSFX.Stop();
+        correctCodeSFX.Stop();
+        doorSFX.Stop();
 
     }
 
@@ -103,6 +115,7 @@ public class Keypad : MonoBehaviour
     public void clearEvent()
     {
         charHolder.text = null;
+        redLight.SetActive(false);
     }
 
     public void enterEvent()
@@ -111,19 +124,38 @@ public class Keypad : MonoBehaviour
         {
             Debug.Log("Success!");
             correctCode = true;
+            
+            greenLight.SetActive(true);
+            correctCodeSFX.Play();
 
-            Destroy(_keypadDoor.gameObject);
-
-            _wall.GetComponent<SpriteRenderer>().sortingOrder = 3;
-            sceneChanger.SetActive(true);
-
-            this.transform.parent.gameObject.SetActive(false);
+            Invoke(nameof(OpenDoorSFX), 0.9f);
+            
+            Invoke(nameof(OpenDoor), 1);
         }
         else
         {
             Debug.Log("Failed");
+            redLight.SetActive(true);
+            incorrectCodeSFX.Play();
         }
     }
 
-  
+
+    private void OpenDoorSFX()
+    {
+        doorSFX.Play();
+    }
+    
+    private void OpenDoor()
+    {
+        
+        
+        Destroy(_keypadDoor.gameObject);
+
+        _wall.GetComponent<SpriteRenderer>().sortingOrder = 3;
+        sceneChanger.SetActive(true);
+
+        this.transform.parent.gameObject.SetActive(false);
+    }
+    
 }

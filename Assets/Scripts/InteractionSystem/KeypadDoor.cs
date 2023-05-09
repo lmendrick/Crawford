@@ -23,6 +23,8 @@ public class KeypadDoor : MonoBehaviour, IInteractable
     
     private String newCode = "";
 
+    
+
     private void Awake()
     {
         
@@ -73,6 +75,7 @@ public class KeypadDoor : MonoBehaviour, IInteractable
 
         
     }
+    
 
     public String GetCode()
     {
