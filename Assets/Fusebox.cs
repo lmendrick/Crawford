@@ -11,6 +11,8 @@ public class Fusebox : MonoBehaviour, IInteractable
     [SerializeField] private GameObject _wirePuzzle;
     [SerializeField] private LightSwitch _lightSwitch;
     [SerializeField] private GabConversationSo _conversation;
+    [SerializeField] private AudioSource _fuseboxOpenSFX;
+    
 
 
     private Inventory _inventory;
@@ -34,6 +36,7 @@ public class Fusebox : MonoBehaviour, IInteractable
         {
             if (item.itemType == Item.ItemType.Crowbar)
             {
+                _fuseboxOpenSFX.Play();
                 _wirePuzzle.SetActive(true);
                 return true;
 

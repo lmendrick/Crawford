@@ -13,6 +13,8 @@ public class WireMain : MonoBehaviour
     public int switchCount;
     public GameObject winText;
     private int onCount = 0;
+
+    public AudioSource soundOnSFX;
     
 
 
@@ -35,8 +37,15 @@ public class WireMain : MonoBehaviour
         if (onCount == switchCount)
         {
             _lightSwitch.FuseboxOn = true;
-            this.transform.parent.gameObject.SetActive(false);
+            soundOnSFX.Play();
+            Invoke(nameof(End), 2);
             //winText.SetActive(true);
         }
     }
+
+    private void End()
+    {
+        this.transform.parent.gameObject.SetActive(false);
+    }
 }
+

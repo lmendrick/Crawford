@@ -11,6 +11,9 @@ public class Chest : MonoBehaviour, IInteractable
     [SerializeField] private GabConversationSo _conversation;
 
     [SerializeField] private bool _hasItem;
+
+    [SerializeField] private AudioSource _openSFX;
+    
     
 
     public Item item;
@@ -41,7 +44,9 @@ public bool Interact(Interactor interactor)
             ItemWorld.SpawnItemWorld(interactor.transform.position, new Item { itemType = item.itemType, amount = 1 });
             hasBeenOpened = true;
 
-         
+            
+            _openSFX.Play();
+            
 
             return true;
 

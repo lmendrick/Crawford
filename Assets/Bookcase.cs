@@ -14,6 +14,10 @@ public class Bookcase : MonoBehaviour, IInteractable
     [SerializeField] private GameObject progressBar;
     [SerializeField] private GameObject _wallSprite;
     [SerializeField] private GameObject _sceneChanger;
+    [SerializeField] private AudioSource _bookcaseSFX;
+
+
+    private bool soundPlayed;
     
     
     
@@ -22,6 +26,8 @@ public class Bookcase : MonoBehaviour, IInteractable
 
     private bool hasCrowbar;
     private bool lightIsOn;
+    
+    
     private Transform _position;
     
     private Inventory _inventory;
@@ -33,6 +39,7 @@ public class Bookcase : MonoBehaviour, IInteractable
     {
         progressBar.SetActive(false);
         _sceneChanger.SetActive(false);
+        soundPlayed = false;
     }
 
     public bool Interact(Interactor interactor)
@@ -63,14 +70,27 @@ public class Bookcase : MonoBehaviour, IInteractable
     {
         if (pushBookcase.eventSuccess)
         {
+
+            if (!soundPlayed)
+            {
+                _bookcaseSFX.Play();
+                soundPlayed = true;
+            }
+            
             _sprite.transform.position += Vector3.left * 3;
             progressBar.SetActive(false);
             _sprite.GetComponent<SpriteRenderer>().sortingOrder = 6;
             //_wallSprite.GetComponent<SpriteRenderer>().sortingOrder = 5;
             _sceneChanger.SetActive(true);
-            gameObject.SetActive(false);
+            Invoke(nameof(End), 1);
         }
     }
+
+    private void End()
+    {
+        gameObject.SetActive(false);
+    }
+    
 
    
 

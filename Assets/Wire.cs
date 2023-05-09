@@ -9,6 +9,7 @@ public class Wire : MonoBehaviour
     public GameObject lightOn;
     private Vector3 startPoint;
     private Vector3 startPosition;
+    public GameObject _indicator;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,9 @@ public class Wire : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        
+        _indicator.SetActive(false);
+        
         // mouse position to world point
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         newPosition.z = 0;

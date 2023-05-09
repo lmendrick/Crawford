@@ -11,6 +11,9 @@ public class LightSwitch : MonoBehaviour, IInteractable
     [SerializeField] private GameObject light;
     [SerializeField] private GameObject _bookcase;
     [SerializeField] private GabConversationSo _conversation;
+
+    [SerializeField] private AudioSource _lightSwitchSFX;
+    
     
     
     
@@ -35,6 +38,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
             lightIsOn = false;
             light.SetActive(false);
             _bookcase.SetActive(false);
+            _lightSwitchSFX.Play();
             
         }
         else if(!lightIsOn && FuseboxOn)
@@ -42,6 +46,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
             lightIsOn = true;
             light.SetActive(true);
             _bookcase.SetActive(true);
+            _lightSwitchSFX.Play();
         }
         else
         {
