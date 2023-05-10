@@ -2322,6 +2322,7 @@ MonoBehaviour:
   patrolDelay: 1
   patrolSpeed: 3
   _player: {fileID: 4327037220607948711}
+  _conversation: {fileID: 11400000, guid: 00a5eedfac3d6314091b641804863095, type: 2}
   Hiding: 0
   animator: {fileID: 0}
 --- !u!50 &1023421552
@@ -3960,6 +3961,7 @@ MonoBehaviour:
   patrolDelay: 1
   patrolSpeed: 3
   _player: {fileID: 4327037220607948711}
+  _conversation: {fileID: 11400000, guid: 00a5eedfac3d6314091b641804863095, type: 2}
   Hiding: 0
   animator: {fileID: 0}
 --- !u!50 &1534756711
@@ -6505,6 +6507,7 @@ MonoBehaviour:
   _uiInventory: {fileID: 1348157911}
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 1353754953}
+  _conversation: {fileID: 0}
   _interactionPoint: {fileID: 4327037219946354890}
   _interactionPointRadius: 1
   _interactableMask:
@@ -6586,6 +6589,7 @@ MonoBehaviour:
   _uiInventory: {fileID: 1348157911}
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 1353754953}
+  _conversation: {fileID: 11400000, guid: dec4b6860daa56d42a04ef06cc41517e, type: 2}
 --- !u!61 &5151097261948545569
 BoxCollider2D:
   m_ObjectHideFlags: 0

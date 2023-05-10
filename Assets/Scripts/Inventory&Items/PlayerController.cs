@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Gab.Scripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +14,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject ItemOverlay;
     private PlayerInput input;
     private Rigidbody2D _rigidbody;
+
+    private SceneManager _sceneManager;
+
+    [SerializeField] private GabConversationSo _conversation;
+
+    
     /*
     public float speed = 5f;
     public Animator animator;
@@ -39,6 +47,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _uiInventory.SetInventory(inventory);
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            GabManager.StartNew(_conversation);
+            Invoke(nameof(EndConvo), 5);
+        }
     }
 
 
@@ -146,5 +159,10 @@ public class PlayerController : MonoBehaviour
         
         
     }*/
+
+    private void EndConvo()
+    {
+        GabManager.End();
+    }
 
 }
