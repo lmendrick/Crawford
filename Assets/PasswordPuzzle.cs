@@ -168,7 +168,7 @@ public class PasswordPuzzle : MonoBehaviour
 
     public void enterEvent()
     {
-        if (charHolder1.text.Equals("1") && charHolder2.text.Equals("2") && charHolder3.text.Equals("3") && charHolder4.text.Equals("4"))
+        if (charHolder1.text.Equals("7") && charHolder2.text.Equals("4") && charHolder3.text.Equals("8") && charHolder4.text.Equals("2"))
         {
             Debug.Log("UNLOCKED!");
         }
