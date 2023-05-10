@@ -18,4 +18,8 @@ MonoBehaviour:
     valueData:
     - 'Hey! What is he doing here!?
 
-'
+
+      (set: $pGoon to 1)
+
+      (set: $pHarvey
+      to 0)'

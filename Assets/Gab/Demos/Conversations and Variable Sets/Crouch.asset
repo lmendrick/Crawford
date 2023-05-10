@@ -22,6 +22,6 @@ MonoBehaviour:
       PRESS "CTRL" TO CROUCH
 
       (set:
-      $pPatron to 0)
+      $pGoon to 0)
 
       (set: $pHarvey to 1)'
