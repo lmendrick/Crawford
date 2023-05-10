@@ -24,6 +24,11 @@ public class PasswordPuzzle : MonoBehaviour
     
     [SerializeField] private GameObject _keypadDoor;
     [SerializeField] private GameObject _puzzle;
+
+    [SerializeField] private GameObject _redLight;
+    [SerializeField] private GameObject _greenLight;
+    
+    
     
     [SerializeField] private GameObject sceneChanger;
 
@@ -177,13 +182,26 @@ public class PasswordPuzzle : MonoBehaviour
         if (charHolder1.text.Equals("7") && charHolder2.text.Equals("4") && charHolder3.text.Equals("8") && charHolder4.text.Equals("2"))
         {
             Debug.Log("UNLOCKED!");
-            _puzzle.SetActive(false);
-            Destroy(_keypadDoor);
+            _greenLight.SetActive(true);
+            Invoke(nameof(End), 2);
             
         }
         else
         {
             Debug.Log("INCORRECT CODE");
+            _redLight.SetActive(true);
+            Invoke(nameof(RedLightOff), 2);
         }
+    }
+
+    private void RedLightOff()
+    {
+        _redLight.SetActive(false);
+    }
+
+    private void End()
+    {
+        _puzzle.SetActive(false);
+        Destroy(_keypadDoor);
     }
 }
