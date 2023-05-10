@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem; //Don't miss this!
 
@@ -15,6 +16,10 @@ public class PlayerControllerTest : MonoBehaviour
     private Vector2 movement;
 
     private bool _FacingRight = true;
+    
+
+    private bool isOnStairs;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +41,7 @@ public class PlayerControllerTest : MonoBehaviour
         input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        isOnStairs = false;
 
     }
 
@@ -100,7 +106,31 @@ public class PlayerControllerTest : MonoBehaviour
         
 	}
 
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("Stairs") && Crouching)
+        {
+            isOnStairs = true;
+            speed = 5f;
+        }
+        else if (!other.transform.CompareTag("Stairs") && Crouching)
+        {
+            speed = 3f;
+        }
+        else
+        {
+            speed = 5f;
+        }
+        
+    }
 
+    // private void OnCollisionExit(Collision other)
+    // {
+    //     if (other.transform.CompareTag("Stairs"))
+    //     {
+    //         isOnStairs = false;
+    //     }
+    // }
 }
 
 
