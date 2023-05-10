@@ -26,6 +26,8 @@ public class EnemyController : MonoBehaviour
     public bool Hiding;
     private float waitTimer;
     
+    public Animator animator;
+    
 
 
     // Awake is called before Start
@@ -83,6 +85,7 @@ public class EnemyController : MonoBehaviour
             {
                 waitTimer -= Time.deltaTime;
                 _rb.velocity = dir.normalized * 0;
+                _animator.SetBool("isStopped", true);
                 return;
             }
 
@@ -96,6 +99,8 @@ public class EnemyController : MonoBehaviour
             
             // Flip direction of enemy and detection collider
             Flip();
+            
+            _animator.SetBool("isStopped", false);
 
             
             
