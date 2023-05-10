@@ -183,6 +183,7 @@ public class PasswordPuzzle : MonoBehaviour
         {
             Debug.Log("UNLOCKED!");
             _greenLight.SetActive(true);
+            sceneChanger.SetActive(true);
             Invoke(nameof(End), 2);
             
         }
