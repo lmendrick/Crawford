@@ -169,7 +169,7 @@ public class EnemyController : MonoBehaviour
         
         if (other.transform.CompareTag("Player"))
         {
-            Debug.Log("Found");
+            //Debug.Log("Found");
             if (!Hiding || !_player.Crouching)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

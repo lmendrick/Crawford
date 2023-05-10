@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PasswordPuzzle : MonoBehaviour
@@ -20,6 +21,11 @@ public class PasswordPuzzle : MonoBehaviour
     public GameObject upButton4;
     public GameObject downButton4;
     public GameObject enterButton;
+    
+    [SerializeField] private GameObject _keypadDoor;
+    [SerializeField] private GameObject _puzzle;
+    
+    [SerializeField] private GameObject sceneChanger;
 
     private void Awake()
     {
@@ -171,6 +177,9 @@ public class PasswordPuzzle : MonoBehaviour
         if (charHolder1.text.Equals("7") && charHolder2.text.Equals("4") && charHolder3.text.Equals("8") && charHolder4.text.Equals("2"))
         {
             Debug.Log("UNLOCKED!");
+            _puzzle.SetActive(false);
+            Destroy(_keypadDoor);
+            
         }
         else
         {
