@@ -311,7 +311,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 7a6b2ba6cedd80545a30b86f685b75a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3681,6 +3681,7 @@ MonoBehaviour:
   _uiInventory: {fileID: 0}
   InvGUI: {fileID: 0}
   ItemOverlay: {fileID: 0}
+  _conversation: {fileID: 0}
   _interactionPoint: {fileID: 2037954666}
   _interactionPointRadius: 1
   _interactableMask:
@@ -3762,6 +3763,7 @@ MonoBehaviour:
   _uiInventory: {fileID: 1348157911}
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 0}
+  _conversation: {fileID: 0}
 --- !u!1 &1114942716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3970,7 +3972,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 7a6b2ba6cedd80545a30b86f685b75a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4185,7 +4187,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 671385d485c0cce49ab27287b45ba6f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4742,7 +4744,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 066615c0e1cda7e42b82ccff0895ea1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5392,7 +5394,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 671385d485c0cce49ab27287b45ba6f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6210,7 +6212,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 61e4e3c214de80a4eb7428e2755a5239, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8654,6 +8656,7 @@ MonoBehaviour:
   _uiInventory: {fileID: 1348157911}
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 1353754953}
+  _conversation: {fileID: 0}
   _interactionPoint: {fileID: 4327037219946354890}
   _interactionPointRadius: 1
   _interactableMask:
@@ -8735,6 +8738,7 @@ MonoBehaviour:
   _uiInventory: {fileID: 1348157911}
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 1353754953}
+  _conversation: {fileID: 0}
 --- !u!61 &5151097261948545569
 BoxCollider2D:
   m_ObjectHideFlags: 0
