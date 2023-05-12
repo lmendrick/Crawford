@@ -769,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a55dc325910e3934fb09e6619e80de8a, type: 2}
     - target: {fileID: 3278308873662811773, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: item.itemType
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3278308873662811775, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: m_RootOrder
@@ -1165,7 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a55dc325910e3934fb09e6619e80de8a, type: 2}
     - target: {fileID: 3278308873662811773, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: item.itemType
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3278308873662811775, guid: e01c9d99196999b4db9924a6a2f8fa4b, type: 3}
       propertyPath: m_RootOrder
@@ -4013,6 +4013,7 @@ MonoBehaviour:
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 1353754953}
   _conversation: {fileID: 0}
+  _bookConversation: {fileID: 11400000, guid: ff52660a717acaf45ba19a0462c784af, type: 2}
   _interactionPoint: {fileID: 4327037219946354890}
   _interactionPointRadius: 1
   _interactableMask:
@@ -4095,6 +4096,7 @@ MonoBehaviour:
   InvGUI: {fileID: 1348157909}
   ItemOverlay: {fileID: 1353754953}
   _conversation: {fileID: 0}
+  _bookConversation: {fileID: 11400000, guid: ff52660a717acaf45ba19a0462c784af, type: 2}
 --- !u!61 &5151097261948545569
 BoxCollider2D:
   m_ObjectHideFlags: 0

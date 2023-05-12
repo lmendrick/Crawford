@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private SceneManager _sceneManager;
 
     [SerializeField] private GabConversationSo _conversation;
+    [SerializeField] private GabConversationSo _bookConversation;
+    
 
     
     /*
@@ -95,6 +97,8 @@ public class PlayerController : MonoBehaviour
                 //You Found A Key
                 //inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount = 1 });
                 ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Key, amount = 1 });
+                GabManager.StartNew(_bookConversation);
+                Invoke(nameof(EndConvo), 3);
                 break;
 
         }
