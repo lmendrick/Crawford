@@ -34,12 +34,14 @@ public class Bookcase : MonoBehaviour, IInteractable
     
     
     public string InteractionPrompt => _prompt;
+    private bool bookcaseHasMoved;
 
     private void Awake()
     {
         progressBar.SetActive(false);
         _sceneChanger.SetActive(false);
         soundPlayed = false;
+        bookcaseHasMoved = false;
     }
 
     public bool Interact(Interactor interactor)
@@ -76,8 +78,13 @@ public class Bookcase : MonoBehaviour, IInteractable
                 _bookcaseSFX.Play();
                 soundPlayed = true;
             }
-            
-            _sprite.transform.position += Vector3.left;
+
+            if (!bookcaseHasMoved)
+            {
+                _sprite.transform.position = _sprite.transform.position + Vector3.left * 3;
+                bookcaseHasMoved = true;
+            }
+            //_sprite.transform.position = Vector3.left * 2;
             progressBar.SetActive(false);
             _sprite.GetComponent<SpriteRenderer>().sortingOrder = 6;
             //_wallSprite.GetComponent<SpriteRenderer>().sortingOrder = 5;
