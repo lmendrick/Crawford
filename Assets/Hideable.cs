@@ -2,17 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Hideable : MonoBehaviour
 {
-    [SerializeField] private EnemyController enemy;
+    [FormerlySerializedAs("enemy")] [SerializeField] private EnemyController enemy1;
+    [SerializeField] private EnemyController enemy2;
     
     public void OnTriggerEnter2D(Collider2D other)
     {
         
         if (other.transform.CompareTag("Player"))
         {
-            enemy.Hiding = true;
+            enemy1.Hiding = true;
+            enemy2.Hiding = true;
         }
     }
 
@@ -21,7 +24,8 @@ public class Hideable : MonoBehaviour
         
         if (other.transform.CompareTag("Player"))
         {
-           enemy.Hiding = false;
+           enemy1.Hiding = false;
+           enemy2.Hiding = true;
         }
     }
 }

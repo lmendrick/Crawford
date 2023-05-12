@@ -16,6 +16,10 @@ public bool Interact(Interactor interactor)
 {
     _password.gameObject.SetActive(true);
     //_password.display();
+
+    _password.display();
+    Debug.Log("CODE: 7482");
+
     return true;
 }
 

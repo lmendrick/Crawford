@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Gab.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,8 +12,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float patrolDelay = 1;
     [SerializeField] private float patrolSpeed = 3;
     [SerializeField] private PlayerControllerTest _player;
-    
 
+    [SerializeField] private GabConversationSo _conversation;
+    
 
     private bool _FacingRight = true;
     
@@ -25,6 +27,8 @@ public class EnemyController : MonoBehaviour
     private Vector2 movement;
     public bool Hiding;
     private float waitTimer;
+    
+    public Animator animator;
     
 
 
@@ -83,6 +87,7 @@ public class EnemyController : MonoBehaviour
             {
                 waitTimer -= Time.deltaTime;
                 _rb.velocity = dir.normalized * 0;
+                _animator.SetBool("isStopped", true);
                 return;
             }
 
@@ -96,6 +101,8 @@ public class EnemyController : MonoBehaviour
             
             // Flip direction of enemy and detection collider
             Flip();
+            
+            _animator.SetBool("isStopped", false);
 
             
             
@@ -164,12 +171,21 @@ public class EnemyController : MonoBehaviour
         
         if (other.transform.CompareTag("Player"))
         {
-            Debug.Log("Found");
+            //Debug.Log("Found");
             if (!Hiding || !_player.Crouching)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                GabManager.StartNew(_conversation);
+                Time.timeScale = 0.01f;
+                Invoke(nameof(RestartScene), 0.03f);
             }
         }
+    }
+
+    private void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GabManager.End();
+        Time.timeScale = 1;
     }
 
 }

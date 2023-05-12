@@ -77,7 +77,7 @@ public class Bookcase : MonoBehaviour, IInteractable
                 soundPlayed = true;
             }
             
-            _sprite.transform.position += Vector3.left * 3;
+            _sprite.transform.position += Vector3.left;
             progressBar.SetActive(false);
             _sprite.GetComponent<SpriteRenderer>().sortingOrder = 6;
             //_wallSprite.GetComponent<SpriteRenderer>().sortingOrder = 5;
