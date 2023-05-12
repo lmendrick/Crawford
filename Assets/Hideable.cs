@@ -25,7 +25,7 @@ public class Hideable : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
            enemy1.Hiding = false;
-           enemy2.Hiding = true;
+           enemy2.Hiding = false;
         }
     }
 }
