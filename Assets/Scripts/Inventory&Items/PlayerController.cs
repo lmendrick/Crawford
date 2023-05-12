@@ -93,8 +93,8 @@ public class PlayerController : MonoBehaviour
             case Item.ItemType.BookWithKey:
                 ItemOverlay.SetActive(true);
                 //You Found A Key
-                inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount = 1 });
-                //ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Key, amount = 1 });
+                //inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount = 1 });
+                ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Key, amount = 1 });
                 break;
 
         }

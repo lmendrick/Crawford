@@ -30,7 +30,7 @@ public class Door : MonoBehaviour, IInteractable
             if (item.itemType == Item.ItemType.Key)
             {
                 Debug.Log("Opening Door!");
-                Destroy(gameObject);
+                //Destroy(gameObject);
                 return true;
             }
         }
