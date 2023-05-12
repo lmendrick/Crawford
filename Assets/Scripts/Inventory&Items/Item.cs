@@ -51,9 +51,9 @@ public class Item {
             case ItemType.puzzleP2: return ItemPopUpAssets.Instance.puzzleP2;
             case ItemType.puzzleP3: return ItemPopUpAssets.Instance.puzzleP3;
             case ItemType.puzzleP4: return ItemPopUpAssets.Instance.puzzleP4;
-            case ItemType.Book1: return ItemPopUpAssets.Instance.Book;
-            case ItemType.Book2: return ItemPopUpAssets.Instance.Book;
-            case ItemType.BookWithKey: return ItemPopUpAssets.Instance.Book;
+            case ItemType.Book1: return ItemPopUpAssets.Instance.OpenBook;
+            case ItemType.Book2: return ItemPopUpAssets.Instance.OpenBook;
+            case ItemType.BookWithKey: return ItemPopUpAssets.Instance.OpenBookWithKey;
            
         }
 
