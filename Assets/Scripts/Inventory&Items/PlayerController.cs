@@ -82,7 +82,11 @@ public class PlayerController : MonoBehaviour
                 ItemOverlay.SetActive(true);
                 //inventory.RemoveItem(new Item { itemType = Item.ItemType.Item1, amount = 1 });
                 break;
-            case Item.ItemType.Book:
+            case Item.ItemType.Book1:
+                ItemOverlay.SetActive(true);
+                //Just A Typical book
+                break;
+            case Item.ItemType.Book2:
                 ItemOverlay.SetActive(true);
                 //Just A Typical book
                 break;

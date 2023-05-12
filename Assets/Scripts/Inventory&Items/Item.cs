@@ -14,7 +14,8 @@ public class Item {
         puzzleP2,
         puzzleP3,
         puzzleP4,
-        Book,
+        Book1,
+        Book2,
         BookWithKey
     }
 
@@ -32,7 +33,8 @@ public class Item {
             case ItemType.puzzleP2: return ItemAssets.Instance.puzzleP2;
             case ItemType.puzzleP3: return ItemAssets.Instance.puzzleP3;
             case ItemType.puzzleP4: return ItemAssets.Instance.puzzleP4;
-            case ItemType.Book: return ItemAssets.Instance.Book;
+            case ItemType.Book1: return ItemAssets.Instance.Book;
+            case ItemType.Book2: return ItemAssets.Instance.Book;
             case ItemType.BookWithKey: return ItemAssets.Instance.Book;
            
         }
@@ -49,6 +51,8 @@ public class Item {
             case ItemType.puzzleP2: return ItemPopUpAssets.Instance.puzzleP2;
             case ItemType.puzzleP3: return ItemPopUpAssets.Instance.puzzleP3;
             case ItemType.puzzleP4: return ItemPopUpAssets.Instance.puzzleP4;
+            case ItemType.Book1: return ItemPopUpAssets.Instance.Book;
+            case ItemType.Book2: return ItemPopUpAssets.Instance.Book;
             case ItemType.BookWithKey: return ItemPopUpAssets.Instance.Book;
            
         }
