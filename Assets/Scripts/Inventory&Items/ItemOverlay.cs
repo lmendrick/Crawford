@@ -86,6 +86,7 @@ public class ItemOverlay : MonoBehaviour
             text.fontSize = 18;
             text.SetText("He was a pain to get through that door behind the shelf, kept trying to fight his way out. Fortunately we got him to settle down enough to cooperate. Who would’ve thought some guy who looked to be around sixty " + num.ToString() + " still had so much vigor.  ");
         }
+        
 
 
     }

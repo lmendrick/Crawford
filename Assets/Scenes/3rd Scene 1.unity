@@ -2208,6 +2208,7 @@ MonoBehaviour:
   puzzleP2: {fileID: -2100279090, guid: 4c96340949832da40a10718b700c3d22, type: 3}
   puzzleP3: {fileID: -1955803038, guid: 4c96340949832da40a10718b700c3d22, type: 3}
   puzzleP4: {fileID: -2008768642, guid: 4c96340949832da40a10718b700c3d22, type: 3}
+  Book: {fileID: 7482667652216324306, guid: 8de70350514d831409d72cc6740f00a0, type: 3}
 --- !u!1 &1023421547
 GameObject:
   m_ObjectHideFlags: 0
@@ -4050,6 +4051,7 @@ MonoBehaviour:
   puzzleP2: {fileID: 21300000, guid: 6f2eb6ba06558ec48bd16a620752a70f, type: 3}
   puzzleP3: {fileID: 21300000, guid: 6f2eb6ba06558ec48bd16a620752a70f, type: 3}
   puzzleP4: {fileID: 21300000, guid: 6f2eb6ba06558ec48bd16a620752a70f, type: 3}
+  Book: {fileID: 7482667652216324306, guid: 8de70350514d831409d72cc6740f00a0, type: 3}
 --- !u!4 &1533370808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3517159338843590730, guid: ff2df3b419129cf449a8bb7f18a47321, type: 3}

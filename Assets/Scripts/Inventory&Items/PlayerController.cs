@@ -82,6 +82,17 @@ public class PlayerController : MonoBehaviour
                 ItemOverlay.SetActive(true);
                 //inventory.RemoveItem(new Item { itemType = Item.ItemType.Item1, amount = 1 });
                 break;
+            case Item.ItemType.Book:
+                ItemOverlay.SetActive(true);
+                //Just A Typical book
+                break;
+            case Item.ItemType.BookWithKey:
+                ItemOverlay.SetActive(true);
+                //You Found A Key
+                inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount = 1 });
+                //ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Key, amount = 1 });
+                break;
+
         }
         
         

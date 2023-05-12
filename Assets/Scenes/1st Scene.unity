@@ -3235,6 +3235,7 @@ MonoBehaviour:
   puzzleP2: {fileID: -2100279090, guid: 4c96340949832da40a10718b700c3d22, type: 3}
   puzzleP3: {fileID: -1955803038, guid: 4c96340949832da40a10718b700c3d22, type: 3}
   puzzleP4: {fileID: -2008768642, guid: 4c96340949832da40a10718b700c3d22, type: 3}
+  Book: {fileID: 0}
 --- !u!1 &1013628546
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,6 +6403,7 @@ MonoBehaviour:
   puzzleP2: {fileID: -2144671892, guid: 08d004a3dc249ef4d9bef5cf2bf748f5, type: 3}
   puzzleP3: {fileID: 1815366980, guid: 08d004a3dc249ef4d9bef5cf2bf748f5, type: 3}
   puzzleP4: {fileID: -16394313, guid: 08d004a3dc249ef4d9bef5cf2bf748f5, type: 3}
+  Book: {fileID: 0}
 --- !u!1 &1527948784
 GameObject:
   m_ObjectHideFlags: 0
