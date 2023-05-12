@@ -15,7 +15,7 @@ public string InteractionPrompt => _prompt;
 public bool Interact(Interactor interactor)
 {
     _password.gameObject.SetActive(true);
-    _password.display();
+    //_password.display();
     return true;
 }
 
