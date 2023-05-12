@@ -19,7 +19,6 @@ public class ItemPopUpAssets : MonoBehaviour
     public Sprite puzzleP2;
     public Sprite puzzleP3;
     public Sprite puzzleP4;
-    public Sprite Book;
     public Sprite OpenBook;
     public Sprite OpenBookWithKey;
 }
