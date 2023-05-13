@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour
 {
-    IEnumerator NextScene()
+    public float changeTime;
+    public string sceneName;
+
+    private void Update()
     {
-        yield return new WaitForSeconds(45);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        changeTime -= Time.deltaTime;
+        if(changeTime <= 0)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }
