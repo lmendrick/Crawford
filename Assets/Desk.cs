@@ -39,6 +39,7 @@ public class Desk : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         _deskNoteCanvas.SetActive(true);
+        _openSFX.Play();
         return true;
     }
 

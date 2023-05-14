@@ -19,6 +19,9 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] private GameObject _doorBarrier;
 
     [SerializeField] private GabConversationSo _conversation;
+
+    [SerializeField] private AudioSource _doorSound;
+    
     
     
     
@@ -41,6 +44,7 @@ public class Door : MonoBehaviour, IInteractable
                 Debug.Log("Opening Door!");
                 _doorSprite.SetActive(false);
                 _doorBarrier.SetActive(false);
+                _doorSound.Play();
                 Destroy(gameObject);
                 return true;
             }
