@@ -21,5 +21,7 @@ MonoBehaviour:
 
       (set: $pGoon to 1)
 
-      (set: $pHarvey
-      to 0)'
+      (set: $pPatron
+      to 0)
+
+      (set: $pHarvey to 0)'

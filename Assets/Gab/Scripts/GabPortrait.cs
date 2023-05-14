@@ -9,8 +9,10 @@ public class GabPortrait : MonoBehaviour
 {
     [SerializeField] private Image portrait1;
     [SerializeField] private Image portrait2;
+    [SerializeField] private Image portrait3;
     [SerializeField] private string name1;
     [SerializeField] private string name2;
+    [SerializeField] private string name3;
     // Start is called before the first frame update
     
 
@@ -43,6 +45,19 @@ public class GabPortrait : MonoBehaviour
 
             if (value == 0)
                 portrait2.color = new Color(1, 1, 1, 0);
+
+        }
+
+
+        if (variableName == name3)
+
+        {
+
+            if (value == 1)
+                portrait3.color = new Color(1, 1, 1, 1);
+
+            if (value == 0)
+                portrait3.color = new Color(1, 1, 1, 0);
 
         }
     }

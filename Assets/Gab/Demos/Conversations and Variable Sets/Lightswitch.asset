@@ -18,7 +18,9 @@ MonoBehaviour:
     valueData:
     - 'The power seems to be off...
 
-      (set: $pPatron to 0)
+      (set: $pGoon to 0)
 
-      (set: $pHarvey
-      to 1)'
+      (set: $pPatron
+      to 0)
+
+      (set: $pHarvey to 1)'

@@ -18,6 +18,9 @@ MonoBehaviour:
     valueData:
     - 'It''s locked...
 
+      (set: $pGoon to 0)
+
       (set: $pPatron to 0)
 
-      (set: $pHarvey to 1)'
+      (set:
+      $pHarvey to 1)'

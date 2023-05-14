@@ -328,8 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6585dd7620cce6f46b3581f36840b24a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lightSwitch: {fileID: 0}
   switchCount: 4
   winText: {fileID: 272688319484269931}
+  soundOnSFX: {fileID: 0}
 --- !u!1 &272688319484269931
 GameObject:
   m_ObjectHideFlags: 0

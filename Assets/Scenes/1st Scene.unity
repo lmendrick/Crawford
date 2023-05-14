@@ -679,6 +679,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -89
       objectReference: {fileID: 0}
+    - target: {fileID: 1020972554601699505, guid: a7b63152db6304b98beae3d20e20e777, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4095270567067051516, guid: a7b63152db6304b98beae3d20e20e777, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1852,6 +1856,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459894637}
   m_CullTransparentMesh: 1
+--- !u!114 &466484348 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1020972554601699505, guid: a7b63152db6304b98beae3d20e20e777, type: 3}
+  m_PrefabInstance: {fileID: 60857797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &494504980
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,6 +5083,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompt: Open Door
+  _doorSprite: {fileID: 0}
+  _doorBarrier: {fileID: 0}
+  _conversation: {fileID: 0}
+  _doorSound: {fileID: 0}
 --- !u!61 &1236356952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8547,6 +8566,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2231544980881978907, guid: 88aeef9b775289c4fbe7570d5a004f1a, type: 3}
+      propertyPath: name3
+      value: pGoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231544980881978907, guid: 88aeef9b775289c4fbe7570d5a004f1a, type: 3}
       propertyPath: portrait1
       value: 
       objectReference: {fileID: 1370130777}
@@ -8554,6 +8577,10 @@ PrefabInstance:
       propertyPath: portrait2
       value: 
       objectReference: {fileID: 905687723}
+    - target: {fileID: 2231544980881978907, guid: 88aeef9b775289c4fbe7570d5a004f1a, type: 3}
+      propertyPath: portrait3
+      value: 
+      objectReference: {fileID: 466484348}
     - target: {fileID: 6415463447773328032, guid: 88aeef9b775289c4fbe7570d5a004f1a, type: 3}
       propertyPath: m_Name
       value: GabPortrait

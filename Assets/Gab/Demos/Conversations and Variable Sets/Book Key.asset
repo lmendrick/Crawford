@@ -18,8 +18,9 @@ MonoBehaviour:
     valueData:
     - 'There''s a key inside!
 
-
       (set: $pGoon to 0)
 
-      (set: $pHarvey to
-      1)'
+      (set: $pPatron to
+      0)
+
+      (set: $pHarvey to 1)'
