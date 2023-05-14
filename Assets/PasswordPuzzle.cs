@@ -27,6 +27,13 @@ public class PasswordPuzzle : MonoBehaviour
 
     [SerializeField] private GameObject _redLight;
     [SerializeField] private GameObject _greenLight;
+
+    [SerializeField] private AudioSource _correctSound;
+    [SerializeField] private AudioSource _incorrectSound;
+    [SerializeField] private AudioSource _doorSound;
+    
+    
+    
     
     
     
@@ -39,7 +46,12 @@ public class PasswordPuzzle : MonoBehaviour
         charHolder3.text = "0";
         charHolder4.text = "0";
     }
-    
+
+    private void Start()
+    {
+        Debug.Log("CODE: 7183");
+    }
+
 
     public void up1()
     {
@@ -179,11 +191,13 @@ public class PasswordPuzzle : MonoBehaviour
 
     public void enterEvent()
     {
-        if (charHolder1.text.Equals("7") && charHolder2.text.Equals("4") && charHolder3.text.Equals("8") && charHolder4.text.Equals("2"))
+        if (charHolder1.text.Equals("7") && charHolder2.text.Equals("1") && charHolder3.text.Equals("8") && charHolder4.text.Equals("3"))
         {
             Debug.Log("UNLOCKED!");
             _greenLight.SetActive(true);
             sceneChanger.SetActive(true);
+            _correctSound.Play();
+            Invoke(nameof(DoorSound), 1);
             Invoke(nameof(End), 2);
             
         }
@@ -191,6 +205,7 @@ public class PasswordPuzzle : MonoBehaviour
         {
             Debug.Log("INCORRECT CODE");
             _redLight.SetActive(true);
+            _incorrectSound.Play();
             Invoke(nameof(RedLightOff), 2);
         }
     }
@@ -200,6 +215,11 @@ public class PasswordPuzzle : MonoBehaviour
         _redLight.SetActive(false);
     }
 
+    private void DoorSound()
+    {
+        _doorSound.Play();
+    }
+    
     private void End()
     {
         _puzzle.SetActive(false);
