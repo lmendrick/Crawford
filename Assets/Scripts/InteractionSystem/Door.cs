@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Gab.Scripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,14 @@ public class Door : MonoBehaviour, IInteractable
     public string InteractionPrompt => _prompt;
 
     public Vector2 InteractionPosition => _rigidbody.position;
+
+    [SerializeField] private GameObject _doorSprite;
+    [SerializeField] private GameObject _doorBarrier;
+
+    [SerializeField] private GabConversationSo _conversation;
+    
+    
+    
 
     private Inventory _inventory;
     
@@ -30,7 +39,9 @@ public class Door : MonoBehaviour, IInteractable
             if (item.itemType == Item.ItemType.Key)
             {
                 Debug.Log("Opening Door!");
-                //Destroy(gameObject);
+                _doorSprite.SetActive(false);
+                _doorBarrier.SetActive(false);
+                Destroy(gameObject);
                 return true;
             }
         }
@@ -44,6 +55,13 @@ public class Door : MonoBehaviour, IInteractable
         
         // If the inventory does not contain a key, displays a message saying so
         Debug.Log("No key found!");
+        GabManager.StartNew(_conversation);
+        Invoke(nameof(EndConvo), 2);
         return false;
+    }
+
+    private void EndConvo()
+    {
+        GabManager.End();
     }
 }

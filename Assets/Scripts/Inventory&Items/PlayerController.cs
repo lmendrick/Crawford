@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _uiInventory.SetInventory(inventory);
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             GabManager.StartNew(_conversation);
             Invoke(nameof(EndConvo), 5);
@@ -97,8 +97,8 @@ public class PlayerController : MonoBehaviour
                 //You Found A Key
                 //inventory.AddItem(new Item { itemType = Item.ItemType.Key, amount = 1 });
                 ItemWorld.SpawnItemWorld(transform.position, new Item { itemType = Item.ItemType.Key, amount = 1 });
-                GabManager.StartNew(_bookConversation);
-                Invoke(nameof(EndConvo), 3);
+                //GabManager.StartNew(_bookConversation);
+                //Invoke(nameof(EndConvo), 3);
                 break;
 
         }
