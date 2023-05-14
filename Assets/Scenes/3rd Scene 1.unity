@@ -2208,7 +2208,6 @@ MonoBehaviour:
   puzzleP2: {fileID: -2100279090, guid: 4c96340949832da40a10718b700c3d22, type: 3}
   puzzleP3: {fileID: -1955803038, guid: 4c96340949832da40a10718b700c3d22, type: 3}
   puzzleP4: {fileID: -2008768642, guid: 4c96340949832da40a10718b700c3d22, type: 3}
-  Book: {fileID: 7482667652216324306, guid: 8de70350514d831409d72cc6740f00a0, type: 3}
   OpenBook: {fileID: 0}
   OpenBookWithKey: {fileID: 0}
 --- !u!1 &1023421547
@@ -5310,7 +5309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843378726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.1, y: -0.72, z: -10}
+  m_LocalPosition: {x: -0.21, y: -0.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6057,7 +6056,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064857026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.1, y: -0.72, z: -10}
+  m_LocalPosition: {x: -0.21, y: -0.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6759,7 +6758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4327037220607948705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.1, y: -0.72, z: 0}
+  m_LocalPosition: {x: -0.21, y: -0.72, z: 0}
   m_LocalScale: {x: 4.0458, y: 4.0458, z: 4.0458}
   m_ConstrainProportionsScale: 0
   m_Children:

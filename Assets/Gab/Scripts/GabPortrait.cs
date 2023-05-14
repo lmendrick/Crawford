@@ -12,7 +12,6 @@ public class GabPortrait : MonoBehaviour
     [SerializeField] private string name1;
     [SerializeField] private string name2;
     // Start is called before the first frame update
-
     
 
     void Start()
