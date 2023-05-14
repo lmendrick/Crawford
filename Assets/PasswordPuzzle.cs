@@ -31,7 +31,8 @@ public class PasswordPuzzle : MonoBehaviour
     [SerializeField] private AudioSource _correctSound;
     [SerializeField] private AudioSource _incorrectSound;
     [SerializeField] private AudioSource _doorSound;
-    
+
+    [SerializeField] private GameObject _puzzleOverlay;
     
     
     
@@ -224,5 +225,14 @@ public class PasswordPuzzle : MonoBehaviour
     {
         _puzzle.SetActive(false);
         Destroy(_keypadDoor);
+    }
+    
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            _puzzleOverlay.SetActive(false);
+        }
+        
     }
 }

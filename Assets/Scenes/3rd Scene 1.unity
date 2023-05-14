@@ -4791,6 +4791,10 @@ PrefabInstance:
       propertyPath: symbol7
       value: 
       objectReference: {fileID: -1317109085, guid: 38e72b7452304d248873a0a914812bd9, type: 3}
+    - target: {fileID: 3072322376522933913, guid: 2b27f16c57da91b4bb51885cfa44179d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3072322376522933916, guid: 2b27f16c57da91b4bb51885cfa44179d, type: 3}
       propertyPath: m_Name
       value: PasswordCanvas
@@ -4816,6 +4820,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 845717781}
     - target: {fileID: 3072322376744019256, guid: 2b27f16c57da91b4bb51885cfa44179d, type: 3}
+      propertyPath: _puzzleOverlay
+      value: 
+      objectReference: {fileID: 1881586820}
+    - target: {fileID: 3072322376744019256, guid: 2b27f16c57da91b4bb51885cfa44179d, type: 3}
       propertyPath: _incorrectSound
       value: 
       objectReference: {fileID: 163917433}
@@ -4826,8 +4834,8 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3072322376522933913, guid: 2b27f16c57da91b4bb51885cfa44179d, type: 3}
   m_PrefabInstance: {fileID: 1556506158}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1881586820}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f69b19f8a188a441b2c9080649f8cac, type: 3}
   m_Name: 
@@ -5733,6 +5741,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1881586820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3072322376522933916, guid: 2b27f16c57da91b4bb51885cfa44179d, type: 3}
+  m_PrefabInstance: {fileID: 1556506158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1944010891 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9134572708022138642, guid: e333adef815187148b8e041840a8677f, type: 3}
@@ -6171,6 +6184,10 @@ PrefabInstance:
       propertyPath: symbol6
       value: 
       objectReference: {fileID: -1995580346, guid: 38e72b7452304d248873a0a914812bd9, type: 3}
+    - target: {fileID: 4220330691748581224, guid: 0a5a23249030b2a4c91dd51cbfc625b4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4220330691748581225, guid: 0a5a23249030b2a4c91dd51cbfc625b4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
